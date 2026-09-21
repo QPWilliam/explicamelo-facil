@@ -1,7 +1,11 @@
-# Netlify detecta Next.js automáticamente (adaptador oficial). Variables de entorno: panel de Netlify.
+# Netlify + Next.js. El plugin oficial convierte la compilación de Next.js en páginas, funciones y caché de Netlify.
+# Las variables de entorno se configuran en el panel de Netlify (Project configuration → Environment variables).
 [build]
   command = "npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
