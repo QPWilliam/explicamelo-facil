@@ -56,6 +56,7 @@ Para AdSense no existe un número oficial de artículos; en la práctica convien
 | --- | --- | --- | --- |
 | `dinero` | Dinero y bancos | Tu dinero, sin letra pequeña | Mucha búsqueda y anuncios financieros bien pagados. |
 | `tecnologia` | Celular y tecnología | Tu celular, más fácil y seguro | Dudas constantes, contenido que dura años. |
+| `ia` | Inteligencia artificial | La IA, sin palabras raras | Tema en auge: mucha gente empieza a usarla y no entiende los términos. |
 | `resenas` | Reseñas y comparativas | Qué comprar sin arrepentirte | Tráfico con intención de compra; afiliados en el futuro. |
 | `trabajo` | Trabajo y empleo | Del CV a tu primer día | Búsquedas estables en todos los países. |
 | `tramites` | Trámites | El papeleo, paso a paso | Series por país (mismo artículo × país). |
@@ -104,6 +105,24 @@ Google Trends o el Planificador de palabras clave.
 | P2 | Cómo hacer copia de seguridad de WhatsApp | `copia-de-seguridad-whatsapp` | ✅ |
 | P3 | Se me mojó el celular: qué hacer (y por qué no usar arroz) | `celular-mojado` | ✅ |
 | P3 | Cómo limpiar el puerto de carga sin dañarlo | `limpiar-puerto-de-carga` | |
+
+### Inteligencia artificial (`ia`)
+
+| P | Artículo | Slug sugerido | Estado |
+| --- | --- | --- | --- |
+| P1 | Glosario de IA: qué significa cada palabra (MCP, agente, prompt, token…) | `glosario-inteligencia-artificial` | ✏️ |
+| P1 | Qué es la inteligencia artificial y cómo funciona, explicado fácil | `que-es-la-inteligencia-artificial` | |
+| P1 | Primeros pasos con la IA: cómo empezar hoy | `primeros-pasos-con-la-ia` | |
+| P1 | ChatGPT, Claude, Gemini o Copilot: cuál elegir (actualizar cada trimestre) | `cual-ia-elegir` | |
+| P1 | Cómo escribir buenas instrucciones (prompts) | `como-escribir-buenos-prompts` | |
+| P2 | Cómo usar Claude paso a paso | `como-usar-claude` | |
+| P2 | 10 formas de usar la IA en tu día a día | `usar-la-ia-en-el-dia-a-dia` | |
+| P2 | Cómo usar la IA para organizar tu semana y programar recordatorios | `organizar-tu-semana-con-ia` | |
+| P2 | Qué es un agente de IA y qué puede hacer por ti | `que-es-un-agente-de-ia` | |
+| P2 | Qué es MCP y para qué sirven los conectores | `que-es-mcp` | |
+| P2 | Privacidad y seguridad: qué no compartir con una IA | `privacidad-con-la-ia` | |
+| P3 | Cómo detectar textos, fotos y videos hechos con IA | `detectar-contenido-hecho-con-ia` | |
+| P3 | Estafas con IA: voces clonadas y videos falsos | `estafas-con-ia` | |
 
 ### Reseñas y comparativas (`resenas`)
 

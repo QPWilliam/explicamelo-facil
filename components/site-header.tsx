@@ -8,7 +8,7 @@ export function SiteHeader() {
       <div className="topbar">
         <div className="wrap topbar-row">
           <span>Guías claras para el día a día</span>
-          <span className="topbar-topics">Dinero · Tecnología · Trámites · Viajes · Trabajo</span>
+          <span className="topbar-topics">Dinero · Tecnología · IA · Trámites · Viajes</span>
         </div>
       </div>
       <div className="wrap header-row">

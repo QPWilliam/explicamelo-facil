@@ -2,6 +2,7 @@ import { z } from "zod";
 export const categories = [
   { slug: "dinero", name: "Dinero y bancos", description: "Tu dinero, sin letra pequeña", icon: "wallet" },
   { slug: "tecnologia", name: "Celular y tecnología", description: "Tu celular, más fácil y seguro", icon: "smartphone" },
+  { slug: "ia", name: "Inteligencia artificial", description: "La IA, sin palabras raras", icon: "bot" },
   { slug: "resenas", name: "Reseñas y comparativas", description: "Qué comprar sin arrepentirte", icon: "star" },
   { slug: "trabajo", name: "Trabajo y empleo", description: "Del CV a tu primer día", icon: "briefcase" },
   { slug: "tramites", name: "Trámites", description: "El papeleo, paso a paso", icon: "file" },

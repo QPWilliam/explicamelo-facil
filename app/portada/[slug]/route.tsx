@@ -7,7 +7,7 @@ import { categoryName } from "@/lib/schema";
 export const revalidate = 86400;
 
 const palette: Record<string, [string, string]> = {
-  dinero: ["#1f6f5c", "#e8f3ee"], tecnologia: ["#2b4c9b", "#e9eefb"], resenas: ["#7a36e0", "#f1eafe"],
+  dinero: ["#1f6f5c", "#e8f3ee"], tecnologia: ["#2b4c9b", "#e9eefb"], ia: ["#4338ca", "#ecebfd"], resenas: ["#7a36e0", "#f1eafe"],
   trabajo: ["#b4531b", "#fbeee6"], hogar: ["#a2195b", "#fbe9f1"], "vida-practica": ["#0f7c8c", "#e5f5f7"],
   visas: ["#1d5fa8", "#e7f0fa"], estudiar: ["#6b5b00", "#f7f2d9"], tramites: ["#3c4a57", "#eceff2"]
 };
