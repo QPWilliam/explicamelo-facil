@@ -17,6 +17,7 @@ test-results/
 
 # Contenido privado: los artículos viven en la base de datos (Supabase).
 content/articles.json
+content/nuevos/
 
 # Herramientas locales de agentes (paquetes de terceros con sus propias licencias)
 .agents/

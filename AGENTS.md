@@ -35,6 +35,11 @@ separado dentro del alcance autorizado. Comprobar los gates de cada skill y la a
 ya existente antes de pedir confirmación. No ejecutar automáticamente el workflow completo
 de distribución de Spec Kit: tiene sus propios gates de revisión.
 
+## Escribir y publicar guías
+
+Para crear una guía nueva, sigue [docs/escribir-articulo.md](docs/escribir-articulo.md) y publícala con
+`npm run publicar -- content/nuevos/<slug>.json`.
+
 ## Reglas de producto y código
 
 - Web en español: **Explicamelo Facil**, dominio objetivo `explicamelofacil.com`.

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import { AdSlot } from "@/components/adsense";
 import { ArticleCard } from "@/components/article-card";
+import { LogoMark } from "@/components/logo";
 import { Markdown, headings, splitSections } from "@/components/markdown";
 import { formatDate, getArticle, getArticles, relatedArticles, siteName, siteUrl } from "@/lib/content";
 import { categoryName, readingMinutes } from "@/lib/schema";
@@ -77,6 +78,8 @@ export default async function ArticlePage({ params }: Props) {
           <ol>{toc.map(h => <li key={h.id}><a href={`#${h.id}`}>{h.title}</a></li>)}</ol>
         </nav>
       )}
+
+      <p className="slogan"><LogoMark size={26} /> Aquí te lo explico muy fácil.</p>
 
       <div className="prose">
         {sections.map((section, i) => (

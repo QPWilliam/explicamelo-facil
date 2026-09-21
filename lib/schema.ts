@@ -12,8 +12,8 @@ export const categories = [
 ] as const;
 export type CategorySlug = (typeof categories)[number]["slug"];
 export const categorySchema = z.enum(categories.map(c => c.slug) as [CategorySlug, ...CategorySlug[]]);
-const imageUrl = z.string().max(2000).refine(v => /^\/((images|uploads)\/)\S+$/.test(v) || /^https:\/\//.test(v), "Usa una imagen local o una URL HTTPS.");
-export const reservedSlugs = ["admin", "api", "categoria", "buscar", "acerca", "privacidad", "contacto", "sitemap", "robots", "ads", "images", "uploads", "_next"];
+const imageUrl = z.string().max(2000).refine(v => /^\/((images|uploads|portada)\/)\S+$/.test(v) || /^https:\/\//.test(v), "Usa una imagen local o una URL HTTPS.");
+export const reservedSlugs = ["admin", "api", "categoria", "buscar", "acerca", "privacidad", "contacto", "sitemap", "robots", "ads", "images", "uploads", "portada", "_next"];
 export const articleSchema = z.object({
   slug: z.string().min(3).max(120).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).refine(v => !reservedSlugs.includes(v), "Esa dirección está reservada por el sitio."),
   title: z.string().min(8).max(160), excerpt: z.string().min(20).max(320),

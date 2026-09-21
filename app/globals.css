@@ -89,6 +89,9 @@ img { max-width: 100%; height: auto; }
 .toc ol { margin: 0; padding-left: 20px; font-family: var(--serif); font-size: 1.05rem; }
 .toc li { margin: 2px 0; }
 
+/* Frase de bienvenida de cada guía */
+.slogan { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-style: italic; font-size: 1.25rem; font-weight: 600; color: var(--brand); margin: 8px 0 18px; }
+
 /* Texto de la guía: serif, cómodo de leer, con capitulares */
 .prose { font-family: var(--serif); font-size: 1.2rem; line-height: 1.7; color: var(--ink); counter-reset: seccion; }
 .prose p, .prose li { margin: 0 0 1.05em; }
