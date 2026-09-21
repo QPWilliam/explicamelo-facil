@@ -25,3 +25,7 @@ content/nuevos/
 .impeccable/
 .codex/
 skills-lock.json
+
+# Material histórico de herramientas anteriores (no refleja el proyecto actual)
+specs/
+docs/skills-workflow.md

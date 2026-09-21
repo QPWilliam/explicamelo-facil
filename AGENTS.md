@@ -1,68 +1,95 @@
-# Explicamelo Facil — contexto para agentes
+# Explícamelo Fácil — guía para agentes de IA
 
-## Inicio de cada tarea
+Lee este archivo antes de tocar el proyecto. Es la fuente de verdad; si algo del código lo contradice,
+manda el código y actualiza este archivo.
 
-1. Leer [PRODUCT.md](PRODUCT.md): objetivo, stack y decisiones del propietario.
-2. Leer [.specify/memory/constitution.md](.specify/memory/constitution.md): principios del proyecto.
-3. Consultar [docs/project-status.md](docs/project-status.md) y comprobar el estado real del código.
-4. Seleccionar las skills pertinentes mediante [docs/skills-workflow.md](docs/skills-workflow.md).
-   Abrir su `SKILL.md` antes de aplicarlas; no cargar todos los paquetes indiscriminadamente.
-5. Si existe `.specify/feature.json`, leer la especificación, el plan y las tareas de esa feature.
-6. Para UI, leer `DESIGN.md` y su brief cuando existan. No inventar preferencias confirmadas.
+## Qué es
 
-Las instrucciones del usuario y del entorno tienen prioridad. No volver a preguntar decisiones
-ya tomadas. Preservar el trabajo existente y continuar desde el hito documentado.
+Sitio editorial en español (**explicamelofacil.com**) con guías fáciles sobre dudas del día a día:
+dinero, celular y tecnología, inteligencia artificial, reseñas, trabajo, trámites, viajes, estudios,
+hogar y vida práctica. Se monetiza con Google AdSense. El dueño quiere mantenerlo con poco esfuerzo:
+publicar guías nuevas debe ser fácil y no requiere tocar código.
 
-## Responsabilidades y orden
+## Stack y arquitectura
 
-- Spec Kit organiza requisitos, planificación, tareas y cobertura de la implementación.
-- Impeccable dirige las superficies y el sistema visual. Ejecutar su contexto una vez por sesión
-  cuando corresponda, seguir el subflujo aplicable y leer `craft-floor` antes de editar UI.
-- Emil design engineering aporta calidad de componentes e interacciones dentro de esa dirección.
-- Mobile native aporta comportamiento móvil; la web editorial conserva scroll y texto seleccionable.
-- Movimiento: elegir entre identificar, proponer, implementar o auditar según la petición.
-- `prototype`, `pick-ui-library` y `review-animations` conservan su invocación explícita.
-- Swift y Expo están disponibles para un futuro alcance nativo; no se aplican a Next.js.
-- No instalar librerías, crear issues o cambiar de stack solo para utilizar una skill.
+- **Next.js 16 (App Router) + React 19 + TypeScript**, desplegado en **Netlify** (plan gratis) con
+  `@netlify/plugin-nextjs`. Cada `git push` a `main` despliega solo.
+- **Supabase**: PostgreSQL (vía **Prisma 6**) para las guías y Storage (bucket `imagenes`) para fotos subidas.
+- **No hay servidor aparte**: la API REST son route handlers de Next.js en `app/api/`.
+- Las guías **viven en la base de datos**, no en el repositorio. Las páginas usan ISR (caché de 1 h +
+  revalidación por etiqueta `articles` al publicar).
 
-Para funcionalidades nuevas: `speckit-specify` → `speckit-clarify` cuando haya ambigüedades
-relevantes → `speckit-plan` → diseño de superficies → `speckit-tasks` → `speckit-analyze`
-→ `speckit-implement` → validación → `speckit-converge` cuando haga falta cerrar diferencias.
-Los cambios pequeños reutilizan los documentos existentes; no reinician toda la planificación.
+```
+app/
+  page.tsx                 portada
+  [slug]/page.tsx          plantilla de TODAS las guías (URL = /<slug>)
+  categoria/[slug]/        listado por categoría
+  buscar/ acerca/ contacto/ privacidad/
+  admin/                   editor privado (contraseña ADMIN_PASSWORD)
+  portada/[slug]/route.tsx portada automática (PNG) cuando la guía no tiene foto
+  api/articles, api/categories, api/health        API pública (JSON)
+  api/session, api/editor/*, api/revalidate       API privada
+  sitemap.ts robots.ts ads.txt/                   SEO y AdSense
+components/                 header, footer, logo, tarjetas, markdown, editor, adsense, analytics
+lib/schema.ts               ESQUEMA ZOD DE UNA GUÍA + LISTA DE CATEGORÍAS (fuente de verdad)
+lib/content.ts              lectura de guías (Supabase, o JSON local si no hay DATABASE_URL)
+lib/repository.ts           consultas Prisma     lib/storage.ts  subida a Supabase Storage
+prisma/schema.prisma        modelo de datos      prisma/seed.ts  carga masiva desde JSON
+scripts/publicar.ts         `npm run publicar`: valida, guarda en Supabase y refresca el sitio
+netlify/functions/keepalive.mts  tarea diaria para que Supabase gratis no se pause
+```
 
-Las auditorías de solo lectura no modifican implementación. Aplicar correcciones en un paso
-separado dentro del alcance autorizado. Comprobar los gates de cada skill y la autorización
-ya existente antes de pedir confirmación. No ejecutar automáticamente el workflow completo
-de distribución de Spec Kit: tiene sus propios gates de revisión.
+## Cómo se publica una guía
 
-## Escribir y publicar guías
+1. Escribir la guía siguiendo **docs/escribir-articulo.md** (formato JSON, tono y reglas) y
+   **docs/guia-de-estilo.md**.
+2. Guardarla en `content/nuevos/<slug>.json` (carpeta ignorada por git).
+3. `npm run publicar -- content/nuevos/<slug>.json` → queda en `https://explicamelofacil.com/<slug>`.
 
-Para crear una guía nueva, sigue [docs/escribir-articulo.md](docs/escribir-articulo.md) y publícala con
-`npm run publicar -- content/nuevos/<slug>.json`.
+Alternativa sin archivos: editor web en `/admin`. `content/articles.json` es un **respaldo local**
+(ignorado por git) que `publicar` mantiene actualizado. En el repo solo va `content/ejemplo.json`.
 
-## Reglas de producto y código
+## Imágenes
 
-- Web en español: **Explicamelo Facil**, dominio objetivo `explicamelofacil.com`.
-- Stack solicitado: Next.js/React/TypeScript, Express y PostgreSQL/Prisma; backend con Docker.
-- Un artículo es contenido con slug y plantilla reutilizable, no un nuevo componente de página.
-- Entregar el contenido principal como HTML generado en servidor o estáticamente.
-- Mantener borradores fuera de API pública, búsquedas, sitemap y páginas públicas.
-- Conservar URL publicadas o establecer redirecciones cuando cambien.
-- Validar entradas y permisos en el servidor; nunca exponer secretos al navegador.
-- Verificar requisitos migratorios con fuentes oficiales y registrar fechas de revisión.
-- El artículo principal será una guía general de visa de turista, sin testimonio personal.
-  No inventar experiencias ni sugerir negar familiares por falta de contacto; explicar honestidad.
-- No prometer tráfico, ingresos, aprobación de AdSense ni capacidad sin mediciones.
-- No activar anuncios con identificadores ficticios ni presentar textos legales como revisados.
-- No aprovisionar recursos de pago ni modificar DNS sin configuración y autorización necesarias.
+- Fotos: **Unsplash** (licencia libre, sin Unsplash+), enlazadas desde `images.unsplash.com`, con crédito
+  `"Foto: <autor> en Unsplash"` en `coverCredit`. Evitar fotos con logos de marcas.
+- Sin foto: `cover: "/portada/<slug>"` genera una portada con el diseño del sitio.
+- Nunca usar imágenes de Google Imágenes, Pinterest ni de otros sitios sin licencia.
 
-## Validación y continuidad
+## Comandos
 
-Ejecutar comprobaciones proporcionales al cambio. En código: tipos, build y comportamientos
-críticos de autenticación, publicación y persistencia. En UI: escritorio, móvil, teclado,
-errores y movimiento reducido. No afirmar que la emulación equivale a un teléfono físico.
-En documentación: coherencia, enlaces y exactitud; no ejecutar tests ajenos al cambio.
+| Comando | Qué hace |
+| --- | --- |
+| `npm run dev` | Sitio local (localhost:3000). Sin DATABASE_URL lee `content/articles.json` o el ejemplo |
+| `npm run build` | `prisma generate` + compilación de producción |
+| `npm run typecheck` | Revisión de tipos (debe quedar en 0 errores) |
+| `npm run publicar -- <archivo.json>` | Publica o actualiza guías |
+| `npm run db:migrate` / `db:seed` | Migraciones / carga masiva |
 
-Actualizar `docs/project-status.md` al completar un hito o cambiar el siguiente paso.
-No marcar tareas completas sin evidencia. Conservar los paquetes originales de `.agents/skills/`,
-`skills-lock.json` y los hooks instalados; no reescribir skills de terceros durante el desarrollo.
+## Reglas de contenido (obligatorias)
+
+- Español neutro latinoamericano, de tú, cercano. Frase de la casa (la pone la plantilla):
+  *"Aquí te lo explico muy fácil."*
+- Toda cifra, precio, requisito o ruta de menú necesita **fuente oficial** en `sources`. Nunca copiar texto.
+- **Prohibido**: salud/medicina, dietas o nutrición, salud mental, inversiones o cripto, asesoría legal o
+  migratoria de un caso concreto, apuestas, piratería, espiar a otras personas.
+- No inventar testimonios, experiencias ni reseñas "probadas" que no se hicieron.
+- Guías de dinero terminan con el aviso de que no sustituyen asesoría financiera.
+- Temas y prioridades pendientes: **docs/catalogo-contenido.md** (marcar ✅ al publicar).
+
+## Reglas de código
+
+- Un artículo es **datos**, no una página nueva: no crear componentes por guía.
+- Para una categoría nueva: agregarla en `lib/schema.ts` (`categories`), su color en
+  `app/portada/[slug]/route.tsx` (`palette`) y su sección en el catálogo.
+- **No cambiar el slug de una guía publicada** (rompe enlaces y SEO); el editor ya lo bloquea.
+- Secretos solo en `.env` (ignorado) y en Netlify. Nunca con prefijo `NEXT_PUBLIC_`:
+  `DATABASE_URL`, `DIRECT_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET`, `REVALIDATE_SECRET`.
+  Los `NEXT_PUBLIC_*` (GA, AdSense, URL, contacto) son públicos a propósito.
+- AdSense: el `<script>` debe ir en el `<head>` como etiqueta real (`components/adsense.tsx`), no con `next/script`.
+- Rutas nuevas en la raíz no deben chocar con slugs: añadirlas a `reservedSlugs` en `lib/schema.ts`.
+- Verificar con `npm run typecheck` antes de hacer commit. Commits en español.
+
+## Estado actual
+
+Ver **docs/project-status.md**. Producto y decisiones del dueño: **PRODUCT.md**.
