@@ -3,7 +3,7 @@ import { Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { AdSenseScript } from "@/components/adsense";
+import { AdSenseHead } from "@/components/adsense";
 import { GoogleAnalytics } from "@/components/analytics";
 import { siteName, siteUrl } from "@/lib/content";
 
@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName, locale: "es_419", url: siteUrl },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
-  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {})
+  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
+  // Metaetiqueta de verificación de AdSense (método "Metaetiqueta" en AdSense > Sitios).
+  ...(process.env.NEXT_PUBLIC_ADSENSE_CLIENT ? { other: { "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT } } : {})
 };
 
 export const viewport: Viewport = { themeColor: "#1f6f5c", width: "device-width", initialScale: 1 };
@@ -26,12 +28,14 @@ export const viewport: Viewport = { themeColor: "#1f6f5c", width: "device-width"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${serif.variable} ${sans.variable}`}>
+      <head>
+        <AdSenseHead />
+      </head>
       <body>
         <a href="#contenido" className="skip">Saltar al contenido</a>
         <SiteHeader />
         <main id="contenido">{children}</main>
         <SiteFooter />
-        <AdSenseScript />
         <GoogleAnalytics />
       </body>
     </html>

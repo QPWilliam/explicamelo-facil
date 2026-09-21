@@ -1,16 +1,17 @@
 "use client";
-import Script from "next/script";
 import { useEffect, useRef } from "react";
 
 export const adsClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
 export const adsEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" && adsClient.startsWith("ca-pub-");
 
-// Script de AdSense. Con "anuncios automáticos" activados en AdSense, Google coloca los anuncios solo.
+// Script de AdSense como etiqueta <script> real en el <head> del HTML (así lo pide Google y así lo
+// detecta su rastreador al verificar el sitio). Con "anuncios automáticos", Google coloca los anuncios solo.
 // El aviso de cookies (CMP) para Europa se configura en AdSense > Privacidad y mensajes y usa este mismo script.
-export function AdSenseScript() {
+export function AdSenseHead() {
   if (!adsEnabled) return null;
   return (
-    <Script id="adsense" async strategy="afterInteractive" crossOrigin="anonymous"
+    // eslint-disable-next-line @next/next/no-sync-scripts
+    <script async crossOrigin="anonymous"
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsClient}`} />
   );
 }
