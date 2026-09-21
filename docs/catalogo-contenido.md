@@ -110,19 +110,19 @@ Google Trends o el Planificador de palabras clave.
 
 | P | Artículo | Slug sugerido | Estado |
 | --- | --- | --- | --- |
-| P1 | Glosario de IA: qué significa cada palabra (MCP, agente, prompt, token…) | `glosario-inteligencia-artificial` | ✏️ |
-| P1 | Qué es la inteligencia artificial y cómo funciona, explicado fácil | `que-es-la-inteligencia-artificial` | |
-| P1 | Primeros pasos con la IA: cómo empezar hoy | `primeros-pasos-con-la-ia` | |
-| P1 | ChatGPT, Claude, Gemini o Copilot: cuál elegir (actualizar cada trimestre) | `cual-ia-elegir` | |
-| P1 | Cómo escribir buenas instrucciones (prompts) | `como-escribir-buenos-prompts` | |
-| P2 | Cómo usar Claude paso a paso | `como-usar-claude` | |
-| P2 | 10 formas de usar la IA en tu día a día | `usar-la-ia-en-el-dia-a-dia` | |
-| P2 | Cómo usar la IA para organizar tu semana y programar recordatorios | `organizar-tu-semana-con-ia` | |
-| P2 | Qué es un agente de IA y qué puede hacer por ti | `que-es-un-agente-de-ia` | |
-| P2 | Qué es MCP y para qué sirven los conectores | `que-es-mcp` | |
-| P2 | Privacidad y seguridad: qué no compartir con una IA | `privacidad-con-la-ia` | |
-| P3 | Cómo detectar textos, fotos y videos hechos con IA | `detectar-contenido-hecho-con-ia` | |
-| P3 | Estafas con IA: voces clonadas y videos falsos | `estafas-con-ia` | |
+| P1 | Glosario de IA: qué significa cada palabra (MCP, agente, prompt, token…) | `glosario-inteligencia-artificial` | ✅ |
+| P1 | Qué es la inteligencia artificial y cómo funciona, explicado fácil | `que-es-la-inteligencia-artificial` | ✅ |
+| P1 | Primeros pasos con la IA: cómo empezar hoy | `primeros-pasos-con-la-ia` | ✅ |
+| P1 | ChatGPT, Claude, Gemini o Copilot: cuál elegir (actualizar cada trimestre) | `cual-ia-elegir` | ✅ |
+| P1 | Cómo escribir buenas instrucciones (prompts) | `como-escribir-buenos-prompts` | ✅ |
+| P2 | Cómo usar Claude paso a paso | `como-usar-claude` | ✅ |
+| P2 | 10 formas de usar la IA en tu día a día | `usar-la-ia-en-el-dia-a-dia` | ✅ |
+| P2 | Cómo usar la IA para organizar tu semana y programar recordatorios | `organizar-tu-semana-con-ia` | ✅ |
+| P2 | Qué es un agente de IA y qué puede hacer por ti | `que-es-un-agente-de-ia` | ✅ |
+| P2 | Qué es MCP y para qué sirven los conectores | `que-es-mcp` | ✅ |
+| P2 | Privacidad y seguridad: qué no compartir con una IA | `privacidad-con-la-ia` | ✅ |
+| P3 | Cómo detectar textos, fotos y videos hechos con IA | `detectar-contenido-hecho-con-ia` | ✅ |
+| P3 | Estafas con IA: voces clonadas y videos falsos | `estafas-con-ia` | ✅ |
 
 ### Reseñas y comparativas (`resenas`)
 
@@ -133,9 +133,9 @@ Google Trends o el Planificador de palabras clave.
 | P2 | iPhone o Android: cuál te conviene | `iphone-o-android` | ✅ |
 | P2 | Celulares por menos de 300 USD: comparativa | `celulares-baratos` | |
 | P2 | ¿Vale la pena un celular reacondicionado? | `celular-reacondicionado` | ✅ |
-| P2 | Cargadores rápidos: qué comprar y qué evitar | `cargador-rapido` | |
-| P3 | Audífonos inalámbricos baratos: qué mirar antes de comprar | `audifonos-inalambricos-baratos` | |
-| P3 | Plan prepago o pospago: cómo decidir | `prepago-o-pospago` | |
+| P2 | Cargadores rápidos: qué comprar y qué evitar | `cargador-rapido` | ✅ |
+| P3 | Audífonos inalámbricos baratos: qué mirar antes de comprar | `audifonos-inalambricos-baratos` | ✅ |
+| P3 | Plan prepago o pospago: cómo decidir | `prepago-o-pospago` | ✅ |
 
 ### Trabajo y empleo (`trabajo`)
 
@@ -146,7 +146,7 @@ Google Trends o el Planificador de palabras clave.
 | P1 | Cómo detectar ofertas de trabajo falsas | `ofertas-de-trabajo-falsas` | ✅ |
 | P2 | Cómo escribir un correo formal (plantillas) | `como-escribir-un-correo-formal` | ✅ |
 | P2 | Cómo crear tu perfil de LinkedIn desde cero | `perfil-de-linkedin` | |
-| P2 | Carta de renuncia: cómo escribirla (plantilla) | `carta-de-renuncia` | |
+| P2 | Carta de renuncia: cómo escribirla (plantilla) | `carta-de-renuncia` | ✅ |
 | P3 | Trabajo remoto: cómo empezar y dónde buscar | `trabajo-remoto` | |
 | P3 | Cómo pedir un aumento de sueldo | `como-pedir-un-aumento` | |
 
@@ -167,8 +167,8 @@ Google Trends o el Planificador de palabras clave.
 | P1 | Visa de turista para Estados Unidos | `visa-turista-estados-unidos` | ✅ |
 | P1 | Cómo llenar el formulario DS-160 paso a paso | `como-llenar-ds-160` | ✅ |
 | P2 | Qué puedes llevar en el equipaje de mano | `equipaje-de-mano` | ✅ |
-| P2 | Cómo encontrar vuelos baratos | `vuelos-baratos` | |
-| P3 | Seguro de viaje: qué cubre y cuándo conviene | `seguro-de-viaje` | |
+| P2 | Cómo encontrar vuelos baratos | `vuelos-baratos` | ✅ |
+| P3 | Seguro de viaje: qué cubre y cuándo conviene | `seguro-de-viaje` | ✅ |
 
 ### Estudiar fuera (`estudiar`)
 
@@ -176,8 +176,8 @@ Google Trends o el Planificador de palabras clave.
 | --- | --- | --- | --- |
 | P1 | Estudiar en Japón: primeros pasos | `estudiar-en-japon-primeros-pasos` | ✅ |
 | P2 | Cómo aprender inglés gratis desde casa | `aprender-ingles-gratis` | ✅ |
-| P2 | Cómo buscar becas para estudiar en el extranjero | `becas-para-estudiar-fuera` | |
-| P3 | Cómo escribir una carta de motivación | `carta-de-motivacion` | |
+| P2 | Cómo buscar becas para estudiar en el extranjero | `becas-para-estudiar-fuera` | ✅ |
+| P3 | Cómo escribir una carta de motivación | `carta-de-motivacion` | ✅ |
 
 ### Casa y hogar (`hogar`)
 
@@ -185,9 +185,9 @@ Google Trends o el Planificador de palabras clave.
 | --- | --- | --- | --- |
 | P1 | Cómo ahorrar luz en casa sin sacrificar comodidad | `ahorrar-luz-en-casa` | ✅ |
 | P2 | Cómo quitar manchas comunes de la ropa | `quitar-manchas-de-la-ropa` | ✅ |
-| P2 | Cómo destapar un fregadero sin químicos fuertes | `destapar-fregadero` | |
-| P3 | Cómo organizar el clóset en una tarde | `organizar-closet` | |
-| P3 | Cómo hacer que la ropa dure más | `ropa-que-dure-mas` | |
+| P2 | Cómo destapar un fregadero sin químicos fuertes | `destapar-fregadero` | ✅ |
+| P3 | Cómo organizar el clóset en una tarde | `organizar-closet` | ✅ |
+| P3 | Cómo hacer que la ropa dure más | `ropa-que-dure-mas` | ✅ |
 
 ### Vida práctica (`vida-practica`)
 
