@@ -1,0 +1,7 @@
+# Netlify detecta Next.js automáticamente (adaptador oficial). Variables de entorno: panel de Netlify.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

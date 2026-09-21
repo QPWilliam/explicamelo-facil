@@ -1,0 +1,26 @@
+node_modules/
+.next/
+.env
+.env.local
+.env.*.local
+!.env.example
+data/
+public/uploads/
+*.tsbuildinfo
+.DS_Store
+test-results/
+.sites-runtime/
+
+.local/
+.impeccable/config.local.json
+*.log
+
+# Contenido privado: los artículos viven en la base de datos (Supabase).
+content/articles.json
+
+# Herramientas locales de agentes (paquetes de terceros con sus propias licencias)
+.agents/
+.specify/
+.impeccable/
+.codex/
+skills-lock.json

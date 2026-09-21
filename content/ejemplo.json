@@ -1,0 +1,33 @@
+[
+  {
+    "author": "Equipo editorial de Explícamelo Fácil",
+    "status": "published",
+    "publishedOnce": false,
+    "featured": false,
+    "publishedAt": "2026-09-21T12:28:00.000Z",
+    "updatedAt": "2026-09-21T12:28:00.000Z",
+    "slug": "como-calcular-un-descuento",
+    "title": "Cómo calcular un descuento o un porcentaje (fácil y rápido)",
+    "excerpt": "El truco para sacar el 10 %, el 25 % o el 30 % de cualquier precio de cabeza, cómo calcular el precio final y cómo funcionan los descuentos dobles.",
+    "category": "vida-practica",
+    "country": "General",
+    "cover": "/images/como-calcular-un-descuento.webp",
+    "coverAlt": "Ilustración de la guía: Cómo calcular un descuento o un porcentaje (fácil y rápido)",
+    "coverCredit": "Ilustración de Explícamelo Fácil.",
+    "tags": [
+      "porcentajes",
+      "descuentos",
+      "matemáticas",
+      "compras"
+    ],
+    "checklist": [
+      "Sé sacar el 10 % moviendo el punto decimal.",
+      "Calculo el precio final multiplicando por lo que pago.",
+      "Sé que dos descuentos seguidos no se suman.",
+      "Compruebo el precio final en la caja o en el carrito.",
+      "Comparo el precio con descuento con el de otras tiendas."
+    ],
+    "sources": [],
+    "body": "«30 % de descuento en toda la tienda». Ves una chaqueta de 450 y empiezas a hacer cuentas en la cabeza, pero te enredas. Calcular porcentajes parece cosa de calculadora, pero con un par de trucos lo haces en segundos, parado frente al mostrador.\n\n> **En pocas palabras:** para sacar el **10 %**, mueve el punto decimal un lugar a la izquierda. Para el **precio final**, multiplica el precio por lo que sí pagas: con 30 % de descuento pagas el 70 %, o sea, precio × 0,70.\n\n## El truco del 10 %\n\nEl 10 % de cualquier número es ese número dividido entre 10: basta con mover el punto decimal un lugar a la izquierda.\n\n- 10 % de 450 = **45**\n- 10 % de 89,90 = **8,99**\n\nA partir de ahí, casi todo sale fácil:\n\n| Descuento | Cómo calcularlo | Ejemplo con 450 |\n| --- | --- | --- |\n| 5 % | la mitad del 10 % | 22,50 |\n| 20 % | el 10 % × 2 | 90 |\n| 25 % | un cuarto del precio | 112,50 |\n| 30 % | el 10 % × 3 | 135 |\n| 50 % | la mitad del precio | 225 |\n\n## El precio final en un solo paso\n\nEn lugar de calcular el descuento y restarlo, multiplica por lo que **sí pagas**:\n\n- 30 % de descuento → pagas el 70 % → 450 × 0,70 = **315**\n- 15 % de descuento → pagas el 85 % → 200 × 0,85 = **170**\n\nEn la calculadora del celular también funciona así: *450 × 0,7*.\n\n## Los descuentos dobles no se suman\n\n\"50 % + 20 % adicional\" **no** es 70 % de descuento. El segundo descuento se aplica sobre el precio ya rebajado:\n\n1. 100 con 50 % → 50\n2. 50 con 20 % → 40\n\nPagas 40, o sea, un **60 %** de descuento total, no 70 %.\n\n## Calcular un aumento o un impuesto\n\nFunciona al revés: si a un precio de 200 le suman un 12 %, multiplica por 1,12 → **224**.\n\n## ¿Cuánto me descontaron?\n\nSi algo costaba 80 y ahora cuesta 60: la diferencia es 20; divide 20 entre 80 = 0,25 → **25 %** de descuento.\n\n## Antes de pagar\n\nComprueba el precio final en la caja o en el carrito: a veces el descuento no aplica a todos los productos o ya estaba incluido en la etiqueta.\n"
+  }
+]
