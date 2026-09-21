@@ -57,7 +57,7 @@ npm run dev        # http://localhost:3000
 
 1. Crea un proyecto en [supabase.com](https://supabase.com).
 2. **Connect → ORMs → Prisma**: copia `DATABASE_URL` (pooler, puerto 6543, `?pgbouncer=true`) y `DIRECT_URL` (puerto 5432) en `.env`.
-3. **Project Settings → API**: copia la *Project URL* en `SUPABASE_URL` y la clave *service_role* en `SUPABASE_SERVICE_ROLE_KEY` (es secreta).
+3. **Project Settings → API**: copia la *Project URL* en `SUPABASE_URL` y la clave *secret* (`sb_secret_…`, o la antigua *service_role*) en `SUPABASE_SERVICE_ROLE_KEY` (es secreta).
 4. **Storage → New bucket**: nombre `imagenes`, público.
 5. Crea las tablas y carga el contenido:
 

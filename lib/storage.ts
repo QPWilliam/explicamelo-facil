@@ -26,7 +26,8 @@ export async function uploadImage(input: Buffer, contentType: string) {
   const path = `${now.getUTCFullYear()}/${String(now.getUTCMonth() + 1).padStart(2, "0")}/${randomUUID()}.${ext}`;
   const res = await fetch(`${url}/storage/v1/object/${bucket}/${path}`, {
     method: "POST",
-    headers: { Authorization: `Bearer ${key}`, apikey: key, "Content-Type": type, "Cache-Control": "31536000", "x-upsert": "false" },
+    // Claves nuevas (sb_secret_…) van solo en "apikey"; las antiguas (service_role, JWT) también como Bearer.
+    headers: { apikey: key, ...(key.startsWith("sb_") ? {} : { Authorization: `Bearer ${key}` }), "Content-Type": type, "Cache-Control": "31536000", "x-upsert": "false" },
     body: new Uint8Array(body)
   });
   if (!res.ok) throw new Error(`Supabase Storage respondió ${res.status}`);
