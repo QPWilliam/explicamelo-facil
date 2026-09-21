@@ -4,7 +4,11 @@ const config: NextConfig = {
   poweredByHeader: false,
   images: {
     // Imágenes subidas desde el editor (Supabase Storage).
-    remotePatterns: [{ protocol: "https", hostname: "*.supabase.co", pathname: "/storage/v1/object/public/**" }]
+    remotePatterns: [
+      { protocol: "https", hostname: "*.supabase.co", pathname: "/storage/v1/object/public/**" },
+      // Fotos con licencia de Unsplash (uso comercial permitido; se da crédito al fotógrafo).
+      { protocol: "https", hostname: "images.unsplash.com" }
+    ]
   },
   async headers() {
     return [{ source: "/(.*)", headers: [
