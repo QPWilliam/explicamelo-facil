@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArticleCard } from "@/components/article-card";
 import { AdSlot } from "@/components/adsense";
-import { getArticles, getCategoriesWithCount } from "@/lib/content";
+import { getArticles, getCategoriesWithCount, siteName, siteUrl } from "@/lib/content";
 import { categoryName, readingMinutes } from "@/lib/schema";
 
 export const revalidate = 3600;
@@ -11,8 +11,15 @@ export default async function Home() {
   const [articles, cats] = await Promise.all([getArticles(), getCategoriesWithCount()]);
   const latest = [...articles].sort((a, b) => Number(b.featured) - Number(a.featured) || b.publishedAt.localeCompare(a.publishedAt));
   const [lead, ...rest] = latest;
+  const jsonLd = [
+    { "@context": "https://schema.org", "@type": "WebSite", name: siteName, url: siteUrl, inLanguage: "es",
+      potentialAction: { "@type": "SearchAction", target: `${siteUrl}/buscar?q={search_term_string}`, "query-input": "required name=search_term_string" } },
+    { "@context": "https://schema.org", "@type": "Organization", name: siteName, url: siteUrl, logo: `${siteUrl}/logo-512.png`,
+      email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || undefined }
+  ];
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <section className="hero wrap">
         <h1>Lo complicado, <em>explicado fácil</em>.</h1>
         <p>Guías paso a paso en español para manejar tu dinero, cuidar tu celular, hacer trámites, viajar y resolver las dudas del día a día.</p>

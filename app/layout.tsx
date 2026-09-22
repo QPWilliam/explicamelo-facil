@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: `${siteName}: guías claras para el día a día`, template: `%s | ${siteName}` },
   description: "Explicaciones fáciles en español sobre dinero, celulares, trámites, viajes, trabajo y dudas cotidianas.",
-  openGraph: { type: "website", siteName, locale: "es_419", url: siteUrl },
+  openGraph: { type: "website", siteName, locale: "es_419", url: siteUrl, images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Explícamelo Fácil" }] },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
   ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),

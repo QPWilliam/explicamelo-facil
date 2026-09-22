@@ -1,15 +1,15 @@
 import { z } from "zod";
 export const categories = [
-  { slug: "dinero", name: "Dinero y bancos", description: "Tu dinero, sin letra pequeña", icon: "wallet" },
-  { slug: "tecnologia", name: "Celular y tecnología", description: "Tu celular, más fácil y seguro", icon: "smartphone" },
-  { slug: "ia", name: "Inteligencia artificial", description: "La IA, sin palabras raras", icon: "bot" },
-  { slug: "resenas", name: "Reseñas y comparativas", description: "Qué comprar sin arrepentirte", icon: "star" },
-  { slug: "trabajo", name: "Trabajo y empleo", description: "Del CV a tu primer día", icon: "briefcase" },
-  { slug: "tramites", name: "Trámites", description: "El papeleo, paso a paso", icon: "file" },
-  { slug: "visas", name: "Visas y viajes", description: "Tu próximo destino empieza aquí", icon: "plane" },
-  { slug: "estudiar", name: "Estudiar fuera", description: "Aprende más allá de tus fronteras", icon: "graduation" },
-  { slug: "hogar", name: "Casa y hogar", description: "Trucos que sí funcionan en casa", icon: "home" },
-  { slug: "vida-practica", name: "Vida práctica", description: "Pequeñas dudas, respuestas claras", icon: "sparkles" }
+  { slug: "dinero", name: "Dinero y bancos", description: "Tu dinero, sin letra pequeña", icon: "wallet", intro: "Guías claras para usar tu tarjeta de crédito, hacer un presupuesto, ahorrar y reconocer estafas bancarias, sin términos complicados." },
+  { slug: "tecnologia", name: "Celular y tecnología", description: "Tu celular, más fácil y seguro", icon: "smartphone", intro: "Cómo cuidar tu celular, proteger tus cuentas, liberar espacio y resolver los problemas más comunes, paso a paso." },
+  { slug: "ia", name: "Inteligencia artificial", description: "La IA, sin palabras raras", icon: "bot", intro: "Qué es la inteligencia artificial, cómo usar ChatGPT, Claude o Gemini, y qué significan palabras como prompt, agente o MCP." },
+  { slug: "resenas", name: "Reseñas y comparativas", description: "Qué comprar sin arrepentirte", icon: "star", intro: "Comparativas honestas y consejos para elegir celular, cargador, audífonos o plan de telefonía sin gastar de más." },
+  { slug: "trabajo", name: "Trabajo y empleo", description: "Del CV a tu primer día", icon: "briefcase", intro: "Currículum, entrevistas, correos formales y cómo detectar ofertas falsas: todo para conseguir y cuidar tu empleo." },
+  { slug: "tramites", name: "Trámites", description: "El papeleo, paso a paso", icon: "file", intro: "Explicaciones sencillas para hacer trámites y apostillar documentos, con enlaces a las fuentes oficiales." },
+  { slug: "visas", name: "Visas y viajes", description: "Tu próximo destino empieza aquí", icon: "plane", intro: "Visas, pasaportes, equipaje, vuelos baratos y seguro de viaje: lo que necesitas saber antes de salir de tu país." },
+  { slug: "estudiar", name: "Estudiar fuera", description: "Aprende más allá de tus fronteras", icon: "graduation", intro: "Becas, idiomas y primeros pasos para estudiar en el extranjero, con fuentes oficiales de cada programa." },
+  { slug: "hogar", name: "Casa y hogar", description: "Trucos que sí funcionan en casa", icon: "home", intro: "Trucos probados para ahorrar luz, quitar manchas, destapar el fregadero y mantener la casa en orden." },
+  { slug: "vida-practica", name: "Vida práctica", description: "Pequeñas dudas, respuestas claras", icon: "sparkles", intro: "Cálculos y dudas del día a día explicados fácil: descuentos, propinas, regla de tres y medidas de cocina." }
 ] as const;
 export type CategorySlug = (typeof categories)[number]["slug"];
 export const categorySchema = z.enum(categories.map(c => c.slug) as [CategorySlug, ...CategorySlug[]]);

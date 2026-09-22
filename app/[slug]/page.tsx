@@ -43,7 +43,7 @@ export default async function ArticlePage({ params }: Props) {
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.excerpt,
       image: [abs(article.cover)], datePublished: article.publishedAt, dateModified: article.updatedAt,
-      author: { "@type": "Organization", name: article.author }, publisher: { "@type": "Organization", name: siteName, url: siteUrl },
+      author: { "@type": "Organization", name: article.author }, publisher: { "@type": "Organization", name: siteName, url: siteUrl, logo: { "@type": "ImageObject", url: `${siteUrl}/logo-512.png` } },
       mainEntityOfPage: `${siteUrl}/${article.slug}`, inLanguage: "es" },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Inicio", item: siteUrl },
