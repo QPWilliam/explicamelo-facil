@@ -8,8 +8,10 @@ import { GoogleAnalytics } from "@/components/analytics";
 import { siteName, siteUrl } from "@/lib/content";
 
 // Newsreader: tipografía editorial (titulares y texto de las guías). Manrope: interfaz.
-const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif", display: "swap", axes: ["opsz"] });
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+// Sin el eje "opsz" los archivos de fuente pesan bastante menos; Manrope no se precarga porque solo
+// se usa en menús y etiquetas (mientras carga se ve la fuente del sistema).
+const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
