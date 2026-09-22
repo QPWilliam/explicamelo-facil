@@ -1,3 +1,6 @@
+# Netlify + Next.js. Este archivo lo comparten TODAS las webs del repositorio:
+# cada sitio de Netlify apunta al mismo repo y se diferencia por NEXT_PUBLIC_SITE_KEY
+# (explicamelofacil | nolandmarks) en sus variables de entorno.
 # Netlify + Next.js. El plugin oficial convierte la compilación de Next.js en páginas, funciones y caché de Netlify.
 # Las variables de entorno se configuran en el panel de Netlify (Project configuration → Environment variables).
 [build]
@@ -8,7 +11,7 @@
   NODE_VERSION = "22"
   # Estos valores son públicos a propósito (aparecen en el HTML o en el código), no son secretos.
   # Sin esta línea, el escáner de secretos de Netlify los detecta y detiene el despliegue.
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_ADSENSE_CLIENT,NEXT_PUBLIC_ADSENSE_ENABLED,NEXT_PUBLIC_ADSENSE_SLOT,NEXT_PUBLIC_GA_ID,NEXT_PUBLIC_CONTACT_EMAIL,SUPABASE_BUCKET,SUPABASE_URL"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_KEY,NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_ADSENSE_CLIENT,NEXT_PUBLIC_ADSENSE_ENABLED,NEXT_PUBLIC_ADSENSE_SLOT,NEXT_PUBLIC_GA_ID,NEXT_PUBLIC_CONTACT_EMAIL,SUPABASE_BUCKET,SUPABASE_URL"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

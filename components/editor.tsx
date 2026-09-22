@@ -2,22 +2,27 @@
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { categories, slugify, type Article } from "@/lib/schema";
+import { slugify, type Article } from "@/lib/schema";
+import { articlePath, categoryName, defaultLocale, site, type Locale } from "@/lib/sites";
 
 type Draft = {
   slug: string; title: string; excerpt: string; category: string; country: string;
+  locale: Locale; city: string; translationKey: string;
   cover: string; coverAlt: string; coverCredit: string; body: string; author: string;
   status: "draft" | "published"; featured: boolean; tags: string; checklist: string; sources: string;
 };
 
 const empty: Draft = {
-  slug: "", title: "", excerpt: "", category: "dinero", country: "General", cover: "", coverAlt: "", coverCredit: "",
+  slug: "", title: "", excerpt: "", category: site.categories[0].slug, country: "General",
+  locale: defaultLocale, city: "", translationKey: "",
+  cover: "", coverAlt: "", coverCredit: "",
   body: "**Explicado fácil:** resume aquí la respuesta en 2 o 3 frases.\n\n## Paso 1: …\n\nTexto…\n",
-  author: "Equipo editorial de Explícamelo Fácil", status: "draft", featured: false, tags: "", checklist: "", sources: ""
+  author: site.author, status: "draft", featured: false, tags: "", checklist: "", sources: ""
 };
 
 function toDraft(a: Article): Draft {
-  return { ...a, tags: a.tags.join(", "), checklist: a.checklist.join("\n"),
+  return { ...a, city: a.city ?? "", translationKey: a.translationKey ?? "",
+    tags: a.tags.join(", "), checklist: a.checklist.join("\n"),
     sources: a.sources.map(s => `${s.title} | ${s.url}`).join("\n") };
 }
 
@@ -31,6 +36,8 @@ function toArticle(d: Draft, original?: Article) {
       const i = l.lastIndexOf("|");
       return i === -1 ? { title: l, url: l } : { title: l.slice(0, i).trim(), url: l.slice(i + 1).trim() };
     }),
+    city: d.city.trim() || null,
+    translationKey: d.translationKey.trim() || null,
     publishedOnce: original?.publishedOnce ?? false,
     publishedAt: original?.publishedAt ?? now, updatedAt: now
   };
@@ -114,11 +121,11 @@ export function EditorApp() {
             <li key={a.slug}>
               <div>
                 <strong>{a.title}</strong><br />
-                <span className="muted small">/{a.slug} · {categories.find(c => c.slug === a.category)?.name}</span>
+                <span className="muted small">{articlePath(a.slug, a.locale)} · {categoryName(a.category, a.locale)}</span>
               </div>
               <div className="toolbar">
                 <span className={`status ${a.status}`}>{a.status === "published" ? "Publicado" : "Borrador"}</span>
-                {a.status === "published" && <a className="btn secondary" href={`/${a.slug}`} target="_blank">Ver</a>}
+                {a.status === "published" && <a className="btn secondary" href={articlePath(a.slug, a.locale)} target="_blank">Ver</a>}
                 <button className="btn secondary" onClick={() => { setSlugTouched(true); setEditing({ draft: toDraft(a), original: a }); setMessage(null); }}>Editar</button>
               </div>
             </li>
@@ -144,15 +151,30 @@ export function EditorApp() {
       <div className="row">
         <label>Dirección (URL)
           <input value={d!.slug} disabled={Boolean(editing.original?.publishedOnce)} onChange={e => { setSlugTouched(true); set("slug", slugify(e.target.value)); }} />
-          <span className="hint">explicamelofacil.com/{d!.slug || "…"}{editing.original?.publishedOnce ? " (ya publicada: no se puede cambiar)" : ""}</span>
+          <span className="hint">{site.domain}{articlePath(d!.slug || "…", d!.locale)}{editing.original?.publishedOnce ? " (ya publicada: no se puede cambiar)" : ""}</span>
         </label>
         <label>Categoría
           <select value={d!.category} onChange={e => set("category", e.target.value)}>
-            {categories.map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+            {site.categories.map(c => <option key={c.slug} value={c.slug}>{categoryName(c.slug, d!.locale)}</option>)}
           </select>
         </label>
         <label>País<input value={d!.country} onChange={e => set("country", e.target.value)} /><span className="hint">“General” si aplica a todos</span></label>
       </div>
+      {site.locales.length > 1 && (
+        <div className="row">
+          <label>Idioma
+            <select value={d!.locale} onChange={e => set("locale", e.target.value as Locale)} disabled={Boolean(editing.original)}>
+              {site.locales.map(l => <option key={l} value={l}>{l === "en" ? "English" : "Español"}</option>)}
+            </select>
+            <span className="hint">{editing.original ? "No se cambia una guía ya creada" : "Cada idioma es una guía distinta"}</span>
+          </label>
+          <label>Ciudad<input value={d!.city} onChange={e => set("city", e.target.value)} placeholder="Londres" /></label>
+          <label>Clave de traducción
+            <input value={d!.translationKey} onChange={e => set("translationKey", e.target.value)} placeholder="camden-guide" />
+            <span className="hint">La misma en las dos versiones para enlazarlas</span>
+          </label>
+        </div>
+      )}
       <label>Resumen (aparece en Google y en las tarjetas)<textarea value={d!.excerpt} onChange={e => set("excerpt", e.target.value)} maxLength={320} style={{ minHeight: 70 }} />
         <span className="hint">{d!.excerpt.length}/320 · ideal 120–160</span></label>
       <div className="row">

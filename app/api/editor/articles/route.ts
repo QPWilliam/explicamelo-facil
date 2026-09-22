@@ -15,7 +15,7 @@ export async function GET() {
   if (!hasDatabase) return noDatabase();
   try {
     const { listArticles } = await import("@/lib/repository");
-    return NextResponse.json(await listArticles(true), { headers: { "Cache-Control": "no-store" } });
+    return NextResponse.json(await listArticles({ admin: true }), { headers: { "Cache-Control": "no-store" } });
   } catch {
     return NextResponse.json({ error: "No se pudieron cargar las guías. Reintenta en un momento." }, { status: 503 });
   }

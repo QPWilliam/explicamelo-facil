@@ -1,6 +1,6 @@
 # Catálogo de contenido — Explícamelo Fácil
 
-Actualizado: 2026-09-21. Documento vivo: marcar cada artículo cuando pase a borrador (✏️) o publicado (✅).
+Actualizado: 2026-09-22. Documento vivo: marcar cada artículo cuando pase a borrador (✏️) o publicado (✅).
 
 ## 1. Qué publicamos y qué no
 
@@ -17,6 +17,8 @@ escribirse investigando fuentes públicas y verificables, sin necesitar un títu
 - Trabajo: CV, entrevistas, correos, ofertas falsas.
 - Trámites, visas y viajes: guías generales con enlaces a la fuente oficial y fecha de revisión.
 - Hogar y vida práctica: limpieza, ahorro de luz, cálculos cotidianos, plantillas.
+- Belleza y cuidado personal: cabello, uñas y maquillaje en casa, sin afirmaciones médicas.
+- Moda y estilo: tallas, códigos de vestimenta, combinaciones y cuidado de prendas.
 
 **No publicamos (o solo derivamos a un profesional)**
 
@@ -64,6 +66,8 @@ Para AdSense no existe un número oficial de artículos; en la práctica convien
 | `estudiar` | Estudiar fuera | Aprende más allá de tus fronteras | Ya existe contenido. |
 | `hogar` | Casa y hogar | Trucos que sí funcionan en casa | Evergreen, fácil de escribir. |
 | `vida-practica` | Vida práctica | Pequeñas dudas, respuestas claras | Plantillas y cálculos cotidianos. |
+| `belleza` | Belleza y cuidado personal | Cabello, uñas y maquillaje en casa | Tutoriales visuales y búsquedas prácticas con intención de compra. |
+| `moda` | Moda y estilo | Vestirte bien sin complicarte | Contenido evergreen sobre tallas, ocasiones y cuidado de prendas. |
 
 ## 4. Catálogo de artículos
 
@@ -196,6 +200,33 @@ Google Trends o el Planificador de palabras clave.
 | P1 | Cómo calcular un descuento o un porcentaje (con calculadora) | `como-calcular-un-descuento` | ✅ |
 | P2 | Cómo calcular la propina | `como-calcular-la-propina` | ✅ |
 | P3 | Cómo escribir una carta formal (plantilla) | `carta-formal` | |
+
+### Belleza y cuidado personal (`belleza`)
+
+| P | Artículo | Slug sugerido | Estado |
+| --- | --- | --- | --- |
+| P1 | Cómo hacer rizos sin calor durante la noche | `como-hacer-rizos-sin-calor` | ✏️ |
+| P1 | Cómo hacer rizos con plancha paso a paso | `como-hacer-rizos-con-plancha` | ✏️ |
+| P1 | Cómo hacerte una manicura sencilla en casa | `como-hacer-manicura-en-casa` | ✏️ |
+| P1 | Cómo poner uñas press-on para que duren más | `como-poner-unas-press-on` | ✏️ |
+| P1 | Cómo quitar uñas press-on sin arrancarlas | `como-quitar-unas-press-on` | ✏️ |
+| P2 | Cómo elegir la forma de tus uñas | `como-elegir-forma-de-unas` | |
+| P2 | Cómo hacer que el esmalte dure más | `como-hacer-que-el-esmalte-dure-mas` | |
+| P2 | Cómo limpiar tus brochas de maquillaje | `como-limpiar-brochas-de-maquillaje` | |
+| P2 | Cómo leer la fecha de duración del maquillaje | `duracion-del-maquillaje` | |
+
+### Moda y estilo (`moda`)
+
+| P | Artículo | Slug sugerido | Estado |
+| --- | --- | --- | --- |
+| P1 | Cómo tomar tus medidas para comprar ropa en línea | `como-tomar-medidas-para-comprar-ropa-en-linea` | ✏️ |
+| P1 | Qué significa casual elegante y cómo vestirte | `que-significa-casual-elegante` | ✏️ |
+| P1 | Qué ponerte para una boda de día | `que-ponerse-para-una-boda-de-dia` | ✏️ |
+| P1 | Cómo leer las etiquetas de lavado de la ropa | `como-leer-etiquetas-de-lavado` | ✏️ |
+| P1 | Cómo crear un clóset cápsula con lo que ya tienes | `como-crear-un-closet-capsula` | ✏️ |
+| P2 | Cómo combinar zapatos con un vestido | `como-combinar-zapatos-con-vestido` | |
+| P2 | Qué collar usar según el escote | `que-collar-usar-segun-el-escote` | |
+| P2 | Cómo cuidar la bisutería para que dure más | `como-cuidar-la-bisuteria` | |
 
 ## 5. Componentes interactivos que suben el tiempo en página
 

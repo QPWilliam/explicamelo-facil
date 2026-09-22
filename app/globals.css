@@ -1,8 +1,17 @@
-/* ───────── Explícamelo Fácil · estilo editorial (periódico + blog) ───────── */
+/* ─────────────────────────────────────────────────────────────────────────
+   Hoja de estilos compartida por todas las webs del proyecto.
+   El tema se elige en lib/sites.ts y llega como <html data-theme="…">:
+     · editorial → Explícamelo Fácil: papel claro, serif, capitulares (por defecto, más abajo)
+     · visual    → No Landmarks: fondo oscuro, foto grande, sin serif (al final del archivo)
+   Todo lo estructural se comparte; cada tema sólo cambia variables y unos pocos detalles.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ───────── Tema editorial (periódico + blog) ───────── */
 :root {
   --bg: #fbfaf7; --paper: #fffdf8; --surface: #ffffff; --ink: #1b1f24; --ink-2: #3a4148; --muted: #6a727b; --line: #e4dfd3; --rule: #1b1f24;
   --brand: #1f6f5c; --brand-ink: #134a3d; --brand-soft: #e8f3ee; --accent: #f2c14e; --accent-soft: #fdf4dc;
   --radius: 12px;
+  --on-brand: #ffffff;
   --serif: var(--font-serif), Georgia, "Times New Roman", serif;
   --sans: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -33,7 +42,7 @@ img { max-width: 100%; height: auto; }
 .logo { text-decoration: none; }
 .header-search { display: flex; flex: 1; min-width: 220px; max-width: 420px; margin-left: auto; }
 .header-search input, .search-big input { flex: 1; min-width: 0; font: inherit; font-size: .95rem; padding: 10px 14px; border: 1px solid var(--line); border-right: 0; border-radius: 999px 0 0 999px; background: var(--surface); }
-.header-search button, .search-big button { font: inherit; font-weight: 700; font-size: .95rem; padding: 10px 18px; border: 0; border-radius: 0 999px 999px 0; background: var(--brand); color: #fff; cursor: pointer; }
+.header-search button, .search-big button { font: inherit; font-weight: 700; font-size: .95rem; padding: 10px 18px; border: 0; border-radius: 0 999px 999px 0; background: var(--brand); color: var(--on-brand); cursor: pointer; }
 .cat-nav { border-top: 3px double var(--rule); border-bottom: 1px solid var(--rule); background: var(--paper); }
 .cat-nav-row { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; justify-content: space-between; }
 .cat-nav a { white-space: nowrap; text-decoration: none; color: var(--ink); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 10px 8px; }
@@ -123,7 +132,7 @@ img { max-width: 100%; height: auto; }
 .box h2 { font-family: var(--serif); font-size: 1.35rem; margin: 0 0 12px; }
 .checklist { list-style: none; padding: 0; margin: 0; }
 .checklist li { padding-left: 34px; position: relative; margin-bottom: 10px; }
-.checklist li::before { content: "✓"; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 6px; background: var(--brand); color: #fff; display: grid; place-items: center; font-size: .8rem; font-weight: 800; }
+.checklist li::before { content: "✓"; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 6px; background: var(--brand); color: var(--on-brand); display: grid; place-items: center; font-size: .8rem; font-weight: 800; }
 .sources { font-size: .95rem; padding-left: 20px; margin: 0 0 10px; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0; }
 .ad { margin: 32px 0; min-height: 120px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 8px 0; }
@@ -154,7 +163,7 @@ img { max-width: 100%; height: auto; }
 .form textarea.body-input { min-height: 480px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; line-height: 1.55; }
 .row { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .hint { font-weight: 400; font-size: .8rem; color: var(--muted); }
-.btn { font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--brand); background: var(--brand); color: #fff; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn { font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--brand); background: var(--brand); color: var(--on-brand); cursor: pointer; text-decoration: none; display: inline-block; }
 .btn.secondary { background: var(--surface); color: var(--brand); }
 .btn:disabled { opacity: .6; cursor: wait; }
 .toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
@@ -178,3 +187,99 @@ img { max-width: 100%; height: auto; }
   .prose > .prose-section:first-child > p:first-of-type::first-letter { font-size: 3.8em; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card-img img { transition: none; } }
+
+/* Selector de idioma de la barra superior (sólo en webs con más de un idioma). */
+.lang-switch { display: flex; gap: 10px; }
+.lang-switch a { color: inherit; text-decoration: none; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.lang-switch a:hover { text-decoration: underline; }
+
+/* ═════════ Tema visual · No Landmarks ═════════
+   Fondo oscuro y foto grande. Las fotos de la ciudad mandan; el texto acompaña. */
+:root[data-theme="visual"] {
+  --bg: #0e1116; --paper: #151b23; --surface: #1b232d; --ink: #f3f6f9; --ink-2: #bcc7d2;
+  --muted: #8b97a4; --line: #27313d; --rule: #3a4653;
+  --brand: #f2b544; --brand-ink: #f8d18a; --brand-soft: #1d2731; --accent: #4aa8ef; --accent-soft: #16202b;
+  --on-brand: #11161c;
+  --radius: 16px;
+  /* En este tema el texto de las guías va en sans; los titulares, en la tipografía display. */
+  --serif: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --head: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+[data-theme="visual"] .wordmark,
+[data-theme="visual"] .hero h1,
+[data-theme="visual"] .lead-story h2,
+[data-theme="visual"] .card-body h3,
+[data-theme="visual"] .article-head h1,
+[data-theme="visual"] .cat-tile strong,
+[data-theme="visual"] .page h1,
+[data-theme="visual"] .box h2,
+[data-theme="visual"] .prose h2,
+[data-theme="visual"] .prose h3 { font-family: var(--head); letter-spacing: -.03em; font-weight: 700; }
+[data-theme="visual"] .wordmark { text-transform: uppercase; letter-spacing: .02em; font-size: 1.45rem; }
+[data-theme="visual"] .wordmark em { font-style: normal; color: var(--brand); }
+
+/* Cabecera: sin la doble regla del periódico, más aire y foco en el buscador. */
+[data-theme="visual"] .site-header { background: var(--bg); border-bottom: 1px solid var(--line); }
+[data-theme="visual"] .topbar { background: var(--paper); color: var(--ink-2); border-bottom: 1px solid var(--line); }
+[data-theme="visual"] .cat-nav { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 0; }
+[data-theme="visual"] .cat-nav a { color: var(--ink-2); font-weight: 600; letter-spacing: .04em; }
+[data-theme="visual"] .cat-nav a:hover { color: var(--brand); box-shadow: inset 0 -2px 0 var(--brand); }
+[data-theme="visual"] .header-search input, [data-theme="visual"] .search-big input { background: var(--surface); color: var(--ink); border-color: var(--line); }
+[data-theme="visual"] .header-search input::placeholder, [data-theme="visual"] .search-big input::placeholder { color: var(--muted); }
+
+/* Portada: titular grande y la foto principal a lo ancho. */
+[data-theme="visual"] .hero { text-align: left; padding: 56px 0 24px; }
+[data-theme="visual"] .hero h1 { margin-inline: 0; max-width: 18ch; font-size: clamp(2.4rem, 6vw, 4.2rem); }
+[data-theme="visual"] .hero h1 em { font-style: normal; color: var(--brand); }
+[data-theme="visual"] .hero p { margin-inline: 0; font-family: var(--sans); font-size: 1.15rem; max-width: 60ch; }
+[data-theme="visual"] .search-big { margin-inline: 0; }
+[data-theme="visual"] .section-title { color: var(--muted); }
+[data-theme="visual"] .lead-story { grid-template-columns: 1fr; gap: 0; border-bottom: 0; position: relative; border-radius: var(--radius); overflow: hidden; }
+[data-theme="visual"] .lead-story .card-img { aspect-ratio: 21 / 9; border-radius: var(--radius); }
+[data-theme="visual"] .lead-story > div:last-child { position: absolute; inset: auto 0 0 0; padding: 28px clamp(20px, 4vw, 40px); background: linear-gradient(to top, rgba(8,11,15,.94) 20%, rgba(8,11,15,0)); }
+[data-theme="visual"] .lead-story p { font-family: var(--sans); font-size: 1rem; max-width: 60ch; color: var(--ink-2); }
+[data-theme="visual"] .lead-story:hover h2 { color: var(--brand); }
+
+/* Tarjetas con esquinas redondeadas y foto algo más alta. */
+[data-theme="visual"] .card-img, [data-theme="visual"] .cover, [data-theme="visual"] .prose img { border-radius: var(--radius); }
+[data-theme="visual"] .card-img { aspect-ratio: 4 / 3; background: var(--surface); }
+[data-theme="visual"] .card-body p { font-family: var(--sans); font-size: .95rem; }
+[data-theme="visual"] .cat-grid { gap: 12px; border-top: 0; }
+[data-theme="visual"] .cat-tile { padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+[data-theme="visual"] .cat-tile:hover { border-color: var(--brand); }
+
+/* Guía: sin capitulares ni numeración de secciones; el peso lo lleva la foto. */
+[data-theme="visual"] .cover { aspect-ratio: 3 / 2; margin-top: 20px; }
+[data-theme="visual"] .lead { font-style: normal; font-family: var(--sans); font-size: 1.15rem; }
+[data-theme="visual"] .prose { font-size: 1.08rem; line-height: 1.75; }
+[data-theme="visual"] .prose > .prose-section:first-child > p:first-of-type::first-letter,
+[data-theme="visual"] .prose h2 + p::first-letter { float: none; font-size: inherit; font-weight: inherit; color: inherit; padding: 0; margin: 0; line-height: inherit; }
+[data-theme="visual"] .prose h2 { border-top: 1px solid var(--line); padding-top: 1.1em; }
+[data-theme="visual"] .prose h2::before { content: none; }
+[data-theme="visual"] .prose blockquote { background: var(--surface); border-left: 3px solid var(--brand); }
+[data-theme="visual"] .slogan { font-family: var(--sans); font-style: normal; font-size: .95rem; font-weight: 600; letter-spacing: .01em; color: var(--muted); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0; }
+[data-theme="visual"] .box { background: var(--paper); border-radius: var(--radius); border-top-width: 3px; }
+[data-theme="visual"] .toc { background: var(--paper); border-left: 3px solid var(--brand); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; }
+[data-theme="visual"] .toc ol { font-family: var(--sans); font-size: .95rem; }
+[data-theme="visual"] .empty { background: var(--paper); }
+[data-theme="visual"] .ad { border-color: var(--line); }
+
+/* Pie: ya estamos en oscuro, así que sólo se separa con una línea. */
+[data-theme="visual"] .site-footer { background: var(--paper); color: var(--ink-2); border-top: 1px solid var(--line); }
+[data-theme="visual"] .site-footer .wordmark { color: var(--ink); }
+[data-theme="visual"] .site-footer .wordmark em { color: var(--brand); }
+[data-theme="visual"] .site-footer a { color: var(--ink); }
+
+/* Editor y formularios sobre fondo oscuro. */
+[data-theme="visual"] .form input, [data-theme="visual"] .form select, [data-theme="visual"] .form textarea,
+[data-theme="visual"] .admin-list li, [data-theme="visual"] .preview { background: var(--surface); color: var(--ink); border-color: var(--line); }
+[data-theme="visual"] .btn.secondary { background: var(--surface); color: var(--brand); }
+[data-theme="visual"] .notice { background: var(--surface); }
+[data-theme="visual"] .notice.error { background: #3a1a17; color: #ffb4a8; }
+[data-theme="visual"] .status { background: var(--surface); color: var(--ink-2); }
+
+@media (max-width: 760px) {
+  [data-theme="visual"] .lead-story > div:last-child { position: static; padding: 14px 0 0; background: none; }
+  [data-theme="visual"] .lead-story .card-img { aspect-ratio: 16 / 9; }
+}

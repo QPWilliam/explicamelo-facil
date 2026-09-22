@@ -4,7 +4,8 @@
 
 Sitio web en español con guías fáciles de seguir sobre dudas cotidianas que una persona puede
 resolver sola: dinero y bancos, celular y tecnología, inteligencia artificial, reseñas, trabajo,
-trámites, viajes, estudios, hogar y vida práctica. Público: hispanohablantes de Latinoamérica y EE. UU.
+trámites, viajes, estudios, hogar, vida práctica, belleza no médica y moda. Público:
+hispanohablantes de Latinoamérica y EE. UU.
 
 ## Objetivo
 

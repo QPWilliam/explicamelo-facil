@@ -1,23 +1,33 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Newsreader } from "next/font/google";
+import { Manrope, Newsreader, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
 import { AdSenseHead } from "@/components/adsense";
 import { GoogleAnalytics } from "@/components/analytics";
-import { siteName, siteUrl } from "@/lib/content";
+import { siteUrl } from "@/lib/content";
+import { brand } from "@/lib/i18n";
+import { defaultLocale, htmlLang, ogLocale, site } from "@/lib/sites";
 
-// Newsreader: tipografía editorial (titulares y texto de las guías). Manrope: interfaz.
-// Sin el eje "opsz" los archivos de fuente pesan bastante menos; Manrope no se precarga porque solo
-// se usa en menús y etiquetas (mientras carga se ve la fuente del sistema).
-const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
+// Cada tema usa sus tipografías. Se declaran las tres: aplicar la variable CSS no descarga nada,
+// el navegador sólo baja la fuente que el CSS del tema activo llega a usar de verdad.
+// `preload` tiene que ser un valor escrito tal cual (next/font no admite expresiones), y como aquí
+// no se puede saber qué tema se está construyendo, va en false en las tres: se descargan al usarse.
+const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif", display: "swap", preload: false });
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap", preload: false });
+const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", display: "swap", preload: false });
+
+const { name, tagline, description } = brand(defaultLocale);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: `${siteName}: guías claras para el día a día`, template: `%s | ${siteName}` },
-  description: "Explicaciones fáciles en español sobre dinero, celulares, trámites, viajes, trabajo y dudas cotidianas.",
-  openGraph: { type: "website", siteName, locale: "es_419", url: siteUrl, images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Explícamelo Fácil" }] },
+  title: { default: `${name}: ${tagline}`, template: `%s | ${name}` },
+  description,
+  openGraph: {
+    type: "website",
+    siteName: name,
+    locale: ogLocale[defaultLocale],
+    url: siteUrl,
+    images: [{ url: "/portada/inicio", width: 1600, height: 900, alt: name }]
+  },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
   ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
@@ -25,19 +35,20 @@ export const metadata: Metadata = {
   ...(process.env.NEXT_PUBLIC_ADSENSE_CLIENT ? { other: { "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT } } : {})
 };
 
-export const viewport: Viewport = { themeColor: "#1f6f5c", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: site.themeColor, width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${serif.variable} ${sans.variable}`}>
+    <html
+      lang={htmlLang[defaultLocale]}
+      data-theme={site.theme}
+      className={`${serif.variable} ${sans.variable} ${display.variable}`}
+    >
       <head>
         <AdSenseHead />
       </head>
       <body>
-        <a href="#contenido" className="skip">Saltar al contenido</a>
-        <SiteHeader />
-        <main id="contenido">{children}</main>
-        <SiteFooter />
+        {children}
         <GoogleAnalytics />
       </body>
     </html>

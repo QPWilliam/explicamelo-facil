@@ -11,39 +11,39 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model Category {
-  slug     String    @id
-  name     String
-  articles Article[]
-}
-
-model Tag {
-  name     String    @id
-  articles Article[]
-}
-
+// Una sola tabla para todas las webs del proyecto.
+// - "site" dice a qué web pertenece la guía (ver lib/sites.ts). NUNCA se consulta sin filtrar por él.
+// - "locale" es el idioma de ESTA versión del texto. La versión en otro idioma es otra fila.
+// - "translationKey" une las versiones de la misma guía en distintos idiomas (para las etiquetas hreflang).
+// Las categorías y las etiquetas no tienen tabla propia: las categorías se definen en lib/sites.ts
+// y las etiquetas son una lista de texto dentro de la propia guía.
 model Article {
-  id            String   @id @default(uuid())
-  slug          String   @unique
-  title         String
-  excerpt       String
-  country       String
-  cover         String
-  coverAlt      String
-  coverCredit   String   @default("")
-  body          String
-  author        String
-  status        String   @default("draft")
-  featured      Boolean  @default(false)
-  publishedOnce Boolean  @default(false)
-  publishedAt   DateTime
-  updatedAt     DateTime @updatedAt
-  categorySlug  String
-  category      Category @relation(fields: [categorySlug], references: [slug])
-  tags          Tag[]
-  sources       Json
-  checklist     Json
+  id             String   @id @default(uuid())
+  site           String
+  locale         String
+  slug           String
+  translationKey String?
+  title          String
+  excerpt        String
+  country        String
+  city           String?
+  cover          String
+  coverAlt       String
+  coverCredit    String   @default("")
+  body           String
+  author         String
+  status         String   @default("draft")
+  featured       Boolean  @default(false)
+  publishedOnce  Boolean  @default(false)
+  publishedAt    DateTime
+  updatedAt      DateTime @updatedAt
+  categorySlug   String
+  tags           String[]
+  sources        Json
+  checklist      Json
 
-  @@index([status, publishedAt])
-  @@index([categorySlug, status])
+  @@unique([site, locale, slug])
+  @@index([site, locale, status, publishedAt])
+  @@index([site, locale, categorySlug, status])
+  @@index([site, translationKey])
 }

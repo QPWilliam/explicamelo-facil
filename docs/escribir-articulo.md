@@ -5,7 +5,7 @@ Sigue estos pasos cada vez que te pidan una guía nueva para Explícamelo Fácil
 ## 1. Elegir el tema
 
 - Revisa `docs/catalogo-contenido.md` y `content/articles.json` para no repetir un slug o un tema.
-- Temas permitidos: dinero cotidiano, celular y tecnología, reseñas/comparativas, trabajo, trámites, viajes, estudios, hogar, vida práctica.
+- Temas permitidos: dinero cotidiano, celular y tecnología, reseñas/comparativas, trabajo, trámites, viajes, estudios, hogar, vida práctica, belleza no médica y moda.
 - **No escribir:** salud, medicina, dietas o nutrición, salud mental, inversiones/cripto, asesoría legal o migratoria de un caso concreto, apuestas, piratería o cómo espiar a otras personas.
 
 ## 2. Investigar
@@ -53,7 +53,7 @@ Guarda la guía en `content/nuevos/<slug>.json`:
 ```
 
 - `slug`: minúsculas, sin tildes, palabras separadas por guiones.
-- `category`: `dinero`, `tecnologia`, `resenas`, `trabajo`, `tramites`, `visas`, `estudiar`, `hogar` o `vida-practica`.
+- `category`: `dinero`, `tecnologia`, `ia`, `resenas`, `trabajo`, `tramites`, `visas`, `estudiar`, `hogar`, `vida-practica`, `belleza` o `moda`.
 - `cover`: `/portada/<slug>` genera una portada automática con el diseño del sitio. Si hay foto propia, usa su URL.
 - `sources`: solo URLs `https://` verificadas. `checklist`: 3–6 acciones.
 - Usa `"status": "draft"` si el propietario quiere revisarla antes.

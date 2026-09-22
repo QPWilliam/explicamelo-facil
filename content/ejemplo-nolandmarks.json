@@ -1,0 +1,320 @@
+[
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "oyster-or-contactless",
+    "translationKey": "oyster-vs-contactless",
+    "title": "Oyster or contactless: which one to use in London",
+    "excerpt": "Oyster and contactless charge the same adult fares and both apply caps. The real choice is convenience, bank fees and child discounts.",
+    "category": "getting-around",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1764357039057-fa44e7fca718?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "A London Underground train waiting at a station platform",
+    "coverCredit": "Photo: Dennis Schmidt on Unsplash",
+    "body": "You do not need to queue at a ticket machine when you land. If your bank card is contactless, you can tap straight through the barriers on the Tube, buses, DLR, trams and most trains inside London. Oyster still exists and can be the better choice, but the difference is smaller than many old guides suggest.\n\n> **The short version:** For most adult visitors with a fee-free bank card, contactless is the easiest choice. Oyster and contactless use the same adult pay-as-you-go fares, and both apply daily and Monday-to-Sunday weekly caps. Choose Oyster when you need a child or Railcard discount, want to control spending with prepaid credit, or your bank charges for foreign transactions.\n\n## The adult fares are the same\n\nA normal adult journey does not become cheaper simply because you bought an Oyster card. TfL charges the same pay-as-you-go fare for the same route and time whether you use Oyster or contactless. Paper single tickets usually cost more, so buying one for every journey is rarely sensible.\n\nFor travel limited to Zones 1 and 2, the adult daily cap is £8.90 as of September 2026. Once your qualifying journeys reach that amount, further travel within those zones is covered for the rest of the transport day. Always check TfL before travelling because individual fares can change even when caps are frozen.\n\n## Both now have weekly capping\n\nThis is where older comparisons go wrong. **Both contactless and Oyster can receive a weekly cap**, calculated over a fixed Monday-to-Sunday period. It is not a rolling seven-day pass. If your visit starts on Thursday and ends the following Wednesday, the calculation resets after Sunday night.\n\nContactless is simpler because the charging is handled automatically against the same bank card or device. Oyster's back-office system also checks the week's journeys and can make an adjustment, but you still need enough prepaid balance to keep travelling while that happens.\n\n## Contactless wins on convenience\n\nThere is no card to buy, no credit to load and no unused balance to recover. A physical card, phone or watch can all work, but TfL treats each as a separate payment method. Tapping in with a plastic card and out with the same card through Apple Pay does not count as using the same card.\n\nContactless stops being convenient if your bank adds a foreign transaction fee, applies an unfavourable exchange rate or declines transport payments in the UK. Check this before the trip rather than discovering it at a barrier.\n\n## Oyster wins for some travellers\n\nOyster remains useful when:\n\n- a traveller aged 11–15 needs the Young Visitor discount added by TfL staff;\n- you have an eligible Railcard discount to load onto the card;\n- your overseas bank charges for every sterling transaction;\n- you prefer a fixed pot of prepaid travel money;\n- your contactless card is not accepted.\n\nEach passenger aged 11 or over normally needs a separate card or contactless device. You cannot tap one bank card several times to pay for a whole group.\n\n## Buses use the same payment rule\n\nThe adult bus and tram fare is currently £1.75, and the Hopper fare allows unlimited bus and tram journeys within one hour of the first touch for that single fare. On buses you touch only when boarding; there is no touch out. The current bus-and-tram daily cap is £5.25.\n\n## Use one method all day\n\nAt rail barriers, touch in and out with exactly the same physical card or device. Take it out of your wallet so the reader cannot select another card. An incomplete journey or a different payment method at the exit can trigger a maximum fare and prevent the journeys from being combined for capping.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": true,
+    "publishedOnce": false,
+    "tags": [
+      "oyster",
+      "contactless",
+      "tube",
+      "transport",
+      "budget"
+    ],
+    "sources": [
+      {
+        "title": "Transport for London — Best ways for visitors to pay",
+        "url": "https://tfl.gov.uk/travel-information/visiting-london/getting-around-london/best-ways-for-visitors-to-pay"
+      },
+      {
+        "title": "Transport for London — Bus and tram fares",
+        "url": "https://tfl.gov.uk/fares/find-fares/bus-and-tram-fares"
+      },
+      {
+        "title": "Transport for London — Travelcards and weekly capping",
+        "url": "https://tfl.gov.uk/fares/ways-to-pay/travelcards-and-group-tickets"
+      }
+    ],
+    "checklist": [
+      "Check whether your bank charges a foreign transaction fee before relying on contactless",
+      "Use the same physical card or phone for every tap, in and out",
+      "Take the card out of your wallet at the barrier",
+      "Check the current fares and caps on the TfL site before you travel"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "es",
+    "slug": "oyster-o-contactless",
+    "translationKey": "oyster-vs-contactless",
+    "title": "Oyster o contactless: cuál usar en Londres",
+    "excerpt": "Oyster y contactless cobran las mismas tarifas adultas y aplican topes. La diferencia real está en la comodidad y los descuentos.",
+    "category": "getting-around",
+    "country": "Reino Unido",
+    "city": "Londres",
+    "cover": "https://images.unsplash.com/photo-1764357039057-fa44e7fca718?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "Un tren del metro de Londres detenido junto al andén de una estación",
+    "coverCredit": "Foto: Dennis Schmidt en Unsplash",
+    "body": "No necesitas hacer fila en una máquina al llegar. Si tu tarjeta bancaria es contactless, puedes pasar directamente por las barreras del metro, DLR, tranvía y casi todos los trenes dentro de Londres. Oyster sigue existiendo y a algunas personas les conviene, pero la diferencia es menor de lo que dicen muchas guías antiguas.\n\n> **En pocas palabras:** para la mayoría de visitantes adultos con una tarjeta bancaria sin comisión, contactless es la opción más sencilla. Oyster y contactless usan las mismas tarifas adultas y ambas aplican topes diarios y semanales de lunes a domingo. Elige Oyster si necesitas un descuento infantil o de Railcard, quieres controlar el gasto con saldo prepagado o tu banco cobra por pagos en libras.\n\n## La tarifa adulta es igual\n\nUn viaje normal no se vuelve más barato simplemente por comprar una Oyster. TfL cobra la misma tarifa de pago por uso para la misma ruta y el mismo horario con Oyster o contactless. Los boletos sencillos de papel suelen costar más, así que comprarlos uno por uno casi nunca tiene sentido.\n\nPara viajes limitados a las zonas 1 y 2, el tope diario adulto es de £8.90 en septiembre de 2026. Cuando los viajes que califican alcanzan esa cantidad, el resto del transporte dentro de esas zonas queda cubierto hasta el final del día tarifario. Revisa TfL antes de viajar, porque las tarifas individuales pueden cambiar aunque los topes permanezcan congelados.\n\n## Las dos tienen tope semanal\n\nAquí se equivocan muchas comparaciones antiguas. **Tanto Oyster como contactless pueden aplicar un tope semanal**, calculado durante un periodo fijo de lunes a domingo. No es un abono móvil de siete días. Si tu visita comienza el jueves y termina el miércoles siguiente, el cálculo vuelve a cero después del domingo.\n\nContactless resulta más simple porque los cargos se calculan automáticamente sobre la misma tarjeta o dispositivo. El sistema de Oyster también revisa los viajes de la semana y puede hacer un ajuste, pero necesitas mantener suficiente saldo prepagado para seguir viajando mientras eso sucede.\n\n## Contactless gana por comodidad\n\nNo compras tarjeta, no recargas saldo y no tienes dinero sobrante que recuperar. Puedes usar una tarjeta física, un teléfono o un reloj, pero TfL considera cada uno un método distinto. Entrar con la tarjeta de plástico y salir con esa misma tarjeta mediante Apple Pay no cuenta como usar la misma.\n\nContactless deja de ser cómoda si tu banco agrega una comisión internacional, usa un tipo de cambio desfavorable o rechaza pagos de transporte en Reino Unido. Compruébalo antes del viaje, no frente a una barrera.\n\n## Oyster sirve en casos concretos\n\nOyster sigue siendo útil cuando:\n\n- una persona de 11 a 15 años necesita que personal de TfL le agregue el descuento Young Visitor;\n- tienes un descuento de Railcard compatible;\n- tu banco cobra por cada transacción en libras;\n- prefieres viajar con una cantidad fija de dinero prepagado;\n- tu tarjeta contactless no es aceptada.\n\nCada pasajero de 11 años o más normalmente necesita su propia tarjeta o dispositivo contactless. No puedes acercar una sola tarjeta bancaria varias veces para pagar por todo un grupo.\n\n## El autobús usa la misma lógica\n\nLa tarifa adulta de autobús y tranvía es actualmente £1.75. Hopper permite viajes ilimitados en autobús y tranvía durante una hora desde el primer toque por esa misma tarifa. En el autobús solo acercas la tarjeta al subir; no se marca la salida. El tope diario actual de autobús y tranvía es £5.25.\n\n## Usa un solo método todo el día\n\nEn las barreras ferroviarias, entra y sal exactamente con la misma tarjeta física o dispositivo. Sácala de la cartera para que el lector no elija otra. Un viaje incompleto o un método distinto al salir puede producir una tarifa máxima e impedir que esos viajes se combinen para calcular el tope.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "oyster",
+      "contactless",
+      "metro",
+      "transporte",
+      "presupuesto"
+    ],
+    "sources": [
+      {
+        "title": "Transport for London — mejores formas de pagar para visitantes",
+        "url": "https://tfl.gov.uk/travel-information/visiting-london/getting-around-london/best-ways-for-visitors-to-pay"
+      },
+      {
+        "title": "Transport for London — tarifas de autobús y tranvía",
+        "url": "https://tfl.gov.uk/fares/find-fares/bus-and-tram-fares"
+      },
+      {
+        "title": "Transport for London — Travelcards y tope semanal",
+        "url": "https://tfl.gov.uk/fares/ways-to-pay/travelcards-and-group-tickets"
+      }
+    ],
+    "checklist": [
+      "Revisa si tu banco cobra comisión por pagos en el extranjero antes de confiar en la contactless",
+      "Usa siempre la misma tarjeta o el mismo teléfono para entrar y salir",
+      "Saca la tarjeta de la cartera al pasar la barrera",
+      "Consulta las tarifas y topes actuales en la web de TfL antes de viajar"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "camden-in-half-a-day",
+    "translationKey": null,
+    "title": "Camden in half a day, without the crowds",
+    "excerpt": "The market is the obvious part and the worst part. Go early, walk north along the canal, and Camden turns into a completely different afternoon.",
+    "category": "neighbourhoods",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1762732293104-5baaa66b8f73?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "People walking below the Camden Lock bridge in North London",
+    "coverCredit": "Photo: Mafalda Moura on Unsplash",
+    "body": "Camden is the neighbourhood most visitors get wrong. They arrive at one in the afternoon on a Saturday, walk into a wall of people, buy something they did not want and leave thinking the place is overrated. It is not overrated. It is just badly timed.\n\n## Arrive before eleven\n\nThe market stalls open gradually through the morning, and the hour before the crowd lands is when you can actually see what is being sold. The food stalls at the Lock are setting up, the light is better for photographs, and you can stand still without being pushed.\n\n## Walk north along the canal\n\nThis is the part almost nobody does. From Camden Lock the towpath runs alongside Regent's Canal towards Primrose Hill and Little Venice. Within five minutes the noise drops away completely. You get narrowboats, herons, back gardens and a version of the city that feels nothing like the high street you just left.\n\n## Then go up Primrose Hill\n\nIt is a short climb and the view back over the skyline is one of the best free things in London. Locals bring a coffee and sit on the grass. There is no queue, no ticket and no gift shop.\n\n## Eat where the queue is short but moving\n\nAt the market, the useful signal is not the length of a queue but its speed. A short queue that never moves means a stall that cooks to order for a crowd it cannot handle. A long queue moving steadily is usually the better food and the shorter wait.\n\n## What to skip\n\nThe stalls selling phone cases, generic band t-shirts and souvenir fridge magnets are the same stock you will find at every market in the city. Nothing there is specific to Camden, and it is priced for people who do not know that.\n\n## Getting there and out\n\nCamden Town station gets so busy at weekends that it sometimes runs as exit-only or closes temporarily. Chalk Farm station is a ten-minute walk away and is almost always calmer. If you are leaving at peak time, walk to Chalk Farm instead of waiting.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "camden",
+      "markets",
+      "canal",
+      "primrose hill",
+      "half day"
+    ],
+    "sources": [
+      {
+        "title": "Camden Market — official site",
+        "url": "https://www.camdenmarket.com/"
+      },
+      {
+        "title": "Transport for London",
+        "url": "https://tfl.gov.uk/"
+      }
+    ],
+    "checklist": [
+      "Arrive before 11am, especially at weekends",
+      "Walk at least ten minutes north along the canal towpath",
+      "Use Chalk Farm station instead of Camden Town at busy times",
+      "Judge a food stall by how fast its queue moves, not how long it is"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "eating-cheap-near-borough-market",
+    "translationKey": null,
+    "title": "How to eat well near Borough Market without paying tourist prices",
+    "excerpt": "The market itself is expensive by design. Five minutes of walking in the right direction changes what you pay for lunch.",
+    "category": "food-drink",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1587380341844-80d936b297a9?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "A colourful fruit stall at Borough Market in London",
+    "coverCredit": "Photo: Hulki Okan Tabak on Unsplash",
+    "body": "Borough Market is genuinely good and genuinely expensive. It is a showcase, and it is priced like one. That does not mean you should avoid it — it means you should know which parts are worth the money and where to go when you want lunch rather than an experience.\n\n## What is actually worth buying inside\n\nThe raw ingredients are where the market earns its reputation: cheese, bread, cured meat, produce. Buying a piece of cheese, a loaf and some fruit and eating it by the river costs a fraction of a sit-down lunch and is better than most of them.\n\nThe cooked food stalls are fine, but you are paying a premium for the roof above your head and the name on the sign.\n\n## Walk five minutes and the prices change\n\nThe streets heading away from the market towards Bermondsey and Southwark have cafés and small restaurants that serve the people who work nearby rather than the people visiting. The same lunch that costs a small fortune at the market is noticeably cheaper two streets away, and you get a table.\n\n## Go on a weekday\n\nWeekends are when the market is fullest and slowest. A weekday lunchtime gives you the same stalls, shorter queues and stallholders who have time to let you taste something before you buy.\n\n## The pub rule\n\nMany pubs near the market serve food that is decent and priced normally, because they are competing with other pubs rather than with a tourist attraction. Ordering at the bar is the norm and there is no table service to tip for.\n\n## Timing\n\nMost stalls wind down in the late afternoon and some close entirely early in the week. Check the market's own opening hours before you plan a trip around it, because they change by day and the full market is not open every day.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "borough market",
+      "cheap eats",
+      "lunch",
+      "southwark"
+    ],
+    "sources": [
+      {
+        "title": "Borough Market — opening times",
+        "url": "https://boroughmarket.org.uk/"
+      },
+      {
+        "title": "Visit London",
+        "url": "https://www.visitlondon.com/"
+      }
+    ],
+    "checklist": [
+      "Check which days the full market is open before you go",
+      "Buy ingredients inside, eat sitting by the river",
+      "Walk two or three streets away for a cheaper sit-down lunch",
+      "Go on a weekday if you want to taste things without queuing"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "london-theatre-tickets-without-overpaying",
+    "translationKey": null,
+    "title": "How to get London theatre tickets without overpaying",
+    "excerpt": "The same seat can cost wildly different amounts depending on where you buy it and how far ahead. Here is where the real discounts live.",
+    "category": "tickets-passes",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1742563224803-70b5096ddcea?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "The illuminated Les Misérables theatre marquee in London's West End",
+    "coverCredit": "Photo: Sung Jin Cho on Unsplash",
+    "body": "West End tickets have one of the widest price ranges of anything you will buy in London. The same performance, the same seat, bought two different ways, can differ by a lot. Most of that difference is avoidable.\n\n## Buy from the theatre itself when you can\n\nEvery official theatre site sells its own tickets, and buying direct avoids the extra booking fees that resale and third-party sites add on top. If a site is offering a seat that the theatre itself says is sold out, you are looking at resale, and you will pay for it.\n\n## The day-of-performance discount booth\n\nThe official discount booth in Leicester Square sells same-day and next-day tickets at reduced prices for shows with seats left to fill. It is run by the industry body rather than by a reseller, which is what separates it from the many lookalike shops around the square advertising cheap tickets.\n\n## Day seats and lotteries\n\nMany long-running shows release a small number of very cheap seats on the morning of the performance, or run an online lottery a day or two before. The seats are usually in the front row or at the side. If you are flexible about which show you see, this is the cheapest way into the West End by a wide margin.\n\n## Midweek beats weekend\n\nA Tuesday or Wednesday evening is consistently cheaper than a Friday or Saturday for the same production, and matinees are cheaper again. If your dates are flexible, moving the night moves the price.\n\n## Read the seat description, not just the price\n\n\"Restricted view\" covers everything from a slightly awkward angle to a pillar in front of your face. The theatre's own seating plan usually says which. A cheap seat with a genuinely bad view is not a bargain.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "theatre",
+      "west end",
+      "tickets",
+      "discounts"
+    ],
+    "sources": [
+      {
+        "title": "Official London Theatre",
+        "url": "https://officiallondontheatre.com/"
+      },
+      {
+        "title": "TKTS Leicester Square",
+        "url": "https://www.tkts.co.uk/"
+      }
+    ],
+    "checklist": [
+      "Compare the theatre's own site before any third-party seller",
+      "Check whether the show runs a day seat release or an online lottery",
+      "Try a midweek evening or a matinee instead of a weekend night",
+      "Read what 'restricted view' means on that theatre's seating plan"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "free-things-to-do-in-london",
+    "translationKey": null,
+    "title": "Free things to do in London that are actually worth your time",
+    "excerpt": "London has more genuinely good free days out than almost any city its size. These are the ones worth building an afternoon around.",
+    "category": "things-to-do",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "The main hall of the Natural History Museum in London",
+    "coverCredit": "Photo: Claudio Testa on Unsplash",
+    "body": "A lot of \"free things to do\" lists pad themselves out with walking past buildings you were going to walk past anyway. These are things you would happily pay for.\n\n## The big national museums\n\nPermanent collections at the major national museums are free to enter. That includes world-class collections of art, antiquities and natural history. Temporary exhibitions are ticketed, but you can spend an entire afternoon in the permanent galleries without paying anything.\n\nGo late in the day if you dislike crowds. Many are quietest in the last two hours before closing, and some open late one evening a week.\n\n## The parks, properly\n\nNot a walk through a park on your way somewhere — an actual afternoon. The royal parks are large enough to get lost in, and each has a different character. Bring something to eat rather than buying it inside, where the cafés are priced for a captive audience.\n\n## The views that cost nothing\n\nSeveral high viewpoints in the city are free if you book a slot in advance, and the hills in the north of the city give you the skyline without a ticket or a lift queue. The paid observation decks are not meaningfully better than the free ones.\n\n## Markets you are not buying at\n\nWandering a food market without spending is a perfectly good hour. The same goes for the flower market on a Sunday morning, which is worth seeing even if you are not carrying a plant home.\n\n## Changing of the guard and similar\n\nFree, famous, and packed. If you want to see it, arrive well before it starts and accept that you will be behind several rows of people. If you would not have sought it out at home, it is fine to skip.\n\n## One thing to know about \"free\"\n\nMuseums that are free to enter rely heavily on donations, and the suggested amount is usually displayed at the door. Giving something, if you can, is what keeps the door open.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "free",
+      "museums",
+      "parks",
+      "budget",
+      "views"
+    ],
+    "sources": [
+      {
+        "title": "The British Museum",
+        "url": "https://www.britishmuseum.org/"
+      },
+      {
+        "title": "The National Gallery",
+        "url": "https://www.nationalgallery.org.uk/"
+      },
+      {
+        "title": "Visit London",
+        "url": "https://www.visitlondon.com/"
+      }
+    ],
+    "checklist": [
+      "Check opening hours and whether a free timed ticket is needed",
+      "Visit large museums in the last two hours before closing for smaller crowds",
+      "Bring your own food into the parks instead of buying inside",
+      "Leave a donation at the free museums if you can"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "site": "nolandmarks",
+    "locale": "en",
+    "slug": "what-a-day-in-london-actually-costs",
+    "translationKey": null,
+    "title": "What a day in London actually costs",
+    "excerpt": "A realistic breakdown of a normal day: transport, food, one paid thing, and the small charges nobody warns you about.",
+    "category": "money-costs",
+    "country": "United Kingdom",
+    "city": "London",
+    "cover": "https://images.unsplash.com/photo-1772968687339-c63dac223b14?auto=format&fit=crop&w=1600&q=80",
+    "coverAlt": "The London skyline, Big Ben and the River Thames at dusk",
+    "coverCredit": "Photo: Daniel Sturley on Unsplash",
+    "body": "Budget guides for London tend to be either fantasy or panic. This is the shape of a normal day, without the two extremes.\n\n## Transport\n\nIf you are moving around central London, your daily transport cost is effectively capped: once you reach the cap, everything else that day is free. That makes transport the easiest part of your budget to predict, and it means there is no reason to walk an extra forty minutes to save money once you have hit it.\n\nBuses cost less per journey than the Tube and have their own hourly transfer deal, so a day spent mostly on buses lands well under the cap.\n\n## Food\n\nThe three realistic levels are: supermarket meal deal, casual sit-down lunch, and a proper dinner. Mixing them is how most people actually eat here — a cheap lunch buys you a better dinner. Tap water is free and safe everywhere, and asking for it in a restaurant is completely normal.\n\n## One paid thing\n\nMost days have a single ticketed item in them: a show, an exhibition, a viewpoint, a tour. Building your day around one paid thing and filling the rest with free museums and walking is the difference between an expensive week and a reasonable one.\n\n## The charges nobody mentions\n\n- Card machines abroad often ask whether you want to pay in your own currency. Always choose pounds. Choosing your own currency lets the machine set its own exchange rate, and it is a bad one.\n- Some banks add a fee to every foreign transaction. Check yours before you rely on tapping for everything.\n- Tipping is not automatic. Many restaurants add a service charge to the bill, and you are not expected to tip again on top. There is no tipping in pubs when you order at the bar.\n\n## The honest summary\n\nTransport is predictable, food is where the range is widest, and the single biggest saving available to you is choosing how many ticketed attractions you do in a day.\n",
+    "author": "No Landmarks",
+    "status": "published",
+    "featured": false,
+    "publishedOnce": false,
+    "tags": [
+      "budget",
+      "money",
+      "costs",
+      "tipping",
+      "cards"
+    ],
+    "sources": [
+      {
+        "title": "Transport for London — Fares",
+        "url": "https://tfl.gov.uk/fares/"
+      },
+      {
+        "title": "Visit London",
+        "url": "https://www.visitlondon.com/"
+      }
+    ],
+    "checklist": [
+      "Always choose to pay in pounds when a card machine offers your own currency",
+      "Check your bank's foreign transaction fee before the trip",
+      "Look for a service charge already on the bill before tipping",
+      "Plan one paid attraction per day and fill the rest with free ones"
+    ],
+    "publishedAt": "2026-09-22T10:00:00.000Z",
+    "updatedAt": "2026-09-22T10:00:00.000Z"
+  }
+]

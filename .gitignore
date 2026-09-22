@@ -6,6 +6,7 @@ node_modules/
 !.env.example
 data/
 public/uploads/
+fotos-pizzeria/
 *.tsbuildinfo
 .DS_Store
 test-results/

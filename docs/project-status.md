@@ -6,11 +6,12 @@ Actualizado: 2026-09-22.
 
 - **https://explicamelofacil.com** en Netlify con HTTPS; `www` redirige al dominio principal.
 - Supabase conectado (`/api/health` → database ok). Guías cargadas con `npm run publicar`.
-- Páginas: portada, guía `/[slug]`, categorías (10), búsqueda, acerca, contacto, privacidad, editor `/admin`.
+- Páginas: portada, guía `/[slug]`, categorías (12), búsqueda, acerca, contacto, privacidad, editor `/admin`.
 - SEO: metadatos, JSON-LD, `sitemap.xml`, `robots.txt`. Search Console configurado por el dueño.
 - Google Analytics activo. AdSense: sitio verificado (fragmento de código), revisión solicitada.
   Mensaje de consentimiento de Google (3 opciones) configurado para EEE/Reino Unido/Suiza.
 - Unas 61 guías publicadas o listas para publicar (`content/nuevos/lote-ia-y-fotos.json`).
+- Diez borradores nuevos de belleza y moda en `content/nuevos/lote-belleza-y-moda.json`, pendientes de revisión y publicación.
 
 ## Pendiente
 
