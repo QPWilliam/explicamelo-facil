@@ -7,6 +7,45 @@ import { routePath, site, type Locale } from "@/lib/sites";
 
 export function AboutView({ locale }: { locale: Locale }) {
   const d = tr(locale);
+  if (site.key === "groundleveljapan") {
+    return (
+      <div className="narrow page prose">
+        {locale === "es" ? (
+          <>
+            <h1>Acerca de Ground Level Japan</h1>
+            <p>Ground Level Japan es una guía bilingüe para entender el Japón cotidiano: cómo moverte, pagar, comprar, instalarte y convivir sin convertir cada pequeña diferencia en un misterio.</p>
+            <h2>Cómo hacemos las guías</h2>
+            <ul>
+              <li>Publicamos cada tema completo en inglés y español; no repartimos la información entre idiomas.</li>
+              <li>Partimos de fuentes oficiales y enlazamos las que respaldan cifras, requisitos y servicios.</li>
+              <li>Distinguimos con claridad lo investigado de lo vivido. Conforme el proyecto se produzca desde Japón, añadiremos fotos, videos y observaciones propias.</li>
+              <li>No vendemos lugares como “los mejores” sin haberlos comparado ni publicamos listas pagadas como si fueran recomendaciones independientes.</li>
+            </ul>
+            <h2>Videos y publicidad</h2>
+            <p>Las guías podrán acompañar videos del canal en varios idiomas. El sitio se mantiene con anuncios, pero la publicidad no decide los temas ni las conclusiones. Consulta la <Link href={routePath("privacy", locale)}>política de privacidad y cookies</Link>.</p>
+            <h2>¿Encontraste un cambio?</h2>
+            <p>Las reglas cambian entre ciudades y con el tiempo. Si una guía quedó desactualizada, <Link href={routePath("contact", locale)}>escríbenos</Link>.</p>
+          </>
+        ) : (
+          <>
+            <h1>About Ground Level Japan</h1>
+            <p>Ground Level Japan is a bilingual guide to ordinary life in Japan: getting around, paying, shopping, settling in and sharing space without turning every small difference into a mystery.</p>
+            <h2>How we make the guides</h2>
+            <ul>
+              <li>Every topic is published in full in English and Spanish; information is not split between languages.</li>
+              <li>We start with official sources and link the ones behind figures, requirements and services.</li>
+              <li>We clearly separate research from first-hand experience. As the project is produced from Japan, we will add our own photos, videos and field notes.</li>
+              <li>We do not call places “the best” without a real comparison or pass sponsored lists off as independent recommendations.</li>
+            </ul>
+            <h2>Video and advertising</h2>
+            <p>Guides may be paired with videos from the multilingual channel. Ads help fund the site, but do not choose our topics or conclusions. Read the <Link href={routePath("privacy", locale)}>privacy and cookie policy</Link>.</p>
+            <h2>Spotted a change?</h2>
+            <p>Rules differ by city and change over time. If a guide is out of date, <Link href={routePath("contact", locale)}>tell us</Link>.</p>
+          </>
+        )}
+      </div>
+    );
+  }
   if (site.key === "nolandmarks") {
     return (
       <div className="narrow page prose">

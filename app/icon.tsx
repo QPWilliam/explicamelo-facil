@@ -7,6 +7,7 @@ export const contentType = "image/png";
 
 export default function Icon() {
   const landmarks = site.key === "nolandmarks";
+  const japan = site.key === "groundleveljapan";
   return new ImageResponse(
     (
       <div style={{ display: "flex", width: "100%", height: "100%" }}>
@@ -16,6 +17,13 @@ export default function Icon() {
             <path d="M14 46c6-2 9-6 8-11-1-6-9-6-10-1-1 6 6 10 14 10 7 0 11-4 12-10 1-7-3-12-3-12"
               fill="none" stroke="#f2b544" strokeWidth="4" strokeLinecap="round" strokeDasharray="1 8" />
             <circle cx="35" cy="22" r="6.5" fill="#f2b544" />
+          </svg>
+        ) : japan ? (
+          <svg width="64" height="64" viewBox="0 0 64 64">
+            <rect x="3" y="3" width="58" height="58" rx="14" fill="#24324a" />
+            <circle cx="45" cy="18" r="7" fill="#e05a47" />
+            <path d="M13 49h38M24 49l6-25h4l6 25" fill="none" stroke="#fffaf0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M32 29v5M32 40v5" fill="none" stroke="#e05a47" strokeWidth="2.5" strokeLinecap="round" />
           </svg>
         ) : (
           <svg width="64" height="64" viewBox="0 0 64 64">

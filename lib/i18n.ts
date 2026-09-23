@@ -38,6 +38,7 @@ export type Dictionary = {
   privacy: string;
   notFoundArticle: string;
   translatePage: string;
+  readIn: (language: string) => string;
 };
 
 const dictionaries: Record<Locale, Dictionary> = {
@@ -77,7 +78,8 @@ const dictionaries: Record<Locale, Dictionary> = {
     contact: "Contacto",
     privacy: "Privacidad y cookies",
     notFoundArticle: "Guía no encontrada",
-    translatePage: "Traducir al español"
+    translatePage: "Traducir al español",
+    readIn: (language: string) => `Leer en ${language}`
   },
   en: {
     skip: "Skip to content",
@@ -115,7 +117,8 @@ const dictionaries: Record<Locale, Dictionary> = {
     contact: "Contact",
     privacy: "Privacy & cookies",
     notFoundArticle: "Guide not found",
-    translatePage: "Translate to Spanish"
+    translatePage: "Translate to Spanish",
+    readIn: (language: string) => `Read in ${language}`
   }
 };
 

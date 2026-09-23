@@ -6,7 +6,7 @@
 export const locales = ["es", "en"] as const;
 export type Locale = (typeof locales)[number];
 
-export const siteKeys = ["explicamelofacil", "nolandmarks"] as const;
+export const siteKeys = ["explicamelofacil", "nolandmarks", "groundleveljapan"] as const;
 export type SiteKey = (typeof siteKeys)[number];
 
 /** Texto que existe en cada idioma que el sitio publica. */
@@ -31,7 +31,7 @@ export type SiteConfig = {
   /** Idiomas que publica, en orden. El primero va en la raíz del dominio; el resto bajo /<idioma>/. */
   locales: readonly Locale[];
   /** Hoja de estilos y componentes de marca. Ver app/globals.css. */
-  theme: "editorial" | "visual";
+  theme: "editorial" | "visual" | "field";
   /** Color de la barra del navegador en móvil. */
   themeColor: string;
   tagline: Translated;
@@ -216,9 +216,129 @@ const noLandmarks: SiteConfig = {
   ]
 };
 
+const groundLevelJapan: SiteConfig = {
+  key: "groundleveljapan",
+  domain: "groundleveljapan.com",
+  name: "Ground Level Japan",
+  locales: ["en", "es"],
+  theme: "field",
+  themeColor: "#24324a",
+  tagline: {
+    en: "Everyday Japan, properly explained.",
+    es: "El Japón cotidiano, bien explicado."
+  },
+  description: {
+    en: "Practical bilingual guides for visiting, moving to and understanding everyday life in Japan.",
+    es: "Guías prácticas bilingües para visitar Japón, mudarte y entender la vida cotidiana del país."
+  },
+  hero: {
+    title: { en: "Japan from", es: "Japón" },
+    highlight: { en: "ground level.", es: "a pie de calle." },
+    lead: {
+      en: "Clear guides for visiting, moving to and understanding everyday life in Japan — researched now, then lived and filmed from Japan as the project grows.",
+      es: "Guías claras para visitar Japón, mudarte y entender la vida cotidiana: investigadas desde ahora y, conforme crezca el proyecto, vividas y grabadas desde Japón."
+    },
+    placeholder: {
+      en: "e.g. IC cards, renting, rubbish rules…",
+      es: "Ej.: tarjetas IC, alquiler, basura…"
+    }
+  },
+  slogan: {
+    en: "Official sources first. First-hand notes when we have them.",
+    es: "Primero, fuentes oficiales. Experiencia propia cuando la tengamos."
+  },
+  footerNote: {
+    en: "Independent bilingual guides to everyday Japan. Rules and services vary by city, so check the official source linked in each guide.",
+    es: "Guías bilingües e independientes sobre el Japón cotidiano. Las reglas y los servicios cambian según la ciudad: confirma en la fuente oficial de cada guía."
+  },
+  author: "Ground Level Japan",
+  routes: {
+    category: { en: "category", es: "categoria" },
+    search: { en: "search", es: "buscar" },
+    about: { en: "about", es: "acerca" },
+    privacy: { en: "privacy", es: "privacidad" },
+    contact: { en: "contact", es: "contacto" }
+  },
+  categories: [
+    {
+      slug: "start-here", icon: "compass", path: { es: "empieza-aqui" },
+      name: { en: "Start Here", es: "Empieza aquí" },
+      description: { en: "The useful basics before anything else", es: "Lo útil antes que todo lo demás" },
+      intro: {
+        en: "Connectivity, safety, first-day decisions and the practical details that make a first trip or move less confusing.",
+        es: "Conectividad, seguridad, decisiones del primer día y detalles prácticos para que tu primer viaje o mudanza sea menos confuso."
+      }
+    },
+    {
+      slug: "moving-settling", icon: "home", path: { es: "mudarte-e-instalarte" },
+      name: { en: "Moving & Settling", es: "Mudarte e instalarte" },
+      description: { en: "Homes, paperwork and your first weeks", es: "Vivienda, papeleo y tus primeras semanas" },
+      intro: {
+        en: "How to read housing listings, set up a home and understand the systems you meet when settling in Japan.",
+        es: "Cómo leer anuncios de vivienda, preparar tu hogar y entender los sistemas que encontrarás al instalarte en Japón."
+      }
+    },
+    {
+      slug: "daily-life", icon: "sparkles", path: { es: "vida-diaria" },
+      name: { en: "Daily Life", es: "Vida diaria" },
+      description: { en: "The small systems behind an ordinary day", es: "Los pequeños sistemas de un día normal" },
+      intro: {
+        en: "Addresses, rubbish, deliveries and the everyday routines that are obvious once someone explains them.",
+        es: "Direcciones, basura, entregas y esas rutinas cotidianas que parecen obvias cuando alguien las explica."
+      }
+    },
+    {
+      slug: "money-costs", icon: "banknote", path: { es: "dinero-y-costos" },
+      name: { en: "Money & Costs", es: "Dinero y costos" },
+      description: { en: "Paying, budgeting and avoiding surprises", es: "Pagos, presupuesto y menos sorpresas" },
+      intro: {
+        en: "Cash, cards, ATMs and realistic cost explanations, without investment advice or made-up budgets.",
+        es: "Efectivo, tarjetas, cajeros y explicaciones realistas de costos, sin inversiones ni presupuestos inventados."
+      }
+    },
+    {
+      slug: "food-shopping", icon: "utensils", path: { es: "comida-y-compras" },
+      name: { en: "Food & Shopping", es: "Comida y compras" },
+      description: { en: "Eating and buying things without guesswork", es: "Comer y comprar sin adivinar" },
+      intro: {
+        en: "Convenience stores, supermarkets, restaurants and useful shopping habits explained without sponsored rankings.",
+        es: "Tiendas de conveniencia, supermercados, restaurantes y hábitos de compra, sin rankings pagados."
+      }
+    },
+    {
+      slug: "getting-around", icon: "train", path: { es: "como-moverse" },
+      name: { en: "Getting Around", es: "Cómo moverse" },
+      description: { en: "Trains, buses and stations made legible", es: "Trenes, buses y estaciones sin enredos" },
+      intro: {
+        en: "IC cards, ticket gates, transfers and the habits that make Japan's transport easier to use.",
+        es: "Tarjetas IC, torniquetes, transbordos y hábitos para usar con más facilidad el transporte de Japón."
+      }
+    },
+    {
+      slug: "culture-etiquette", icon: "heart", path: { es: "cultura-y-convivencia" },
+      name: { en: "Culture & Etiquette", es: "Cultura y convivencia" },
+      description: { en: "Context, not a list of scary rules", es: "Contexto, no una lista de reglas intimidantes" },
+      intro: {
+        en: "Everyday manners and cultural context, explained with curiosity rather than treating Japan as an exotic puzzle.",
+        es: "Modales cotidianos y contexto cultural, explicados con curiosidad y sin tratar Japón como un acertijo exótico."
+      }
+    },
+    {
+      slug: "places-weekends", icon: "map-pin", path: { es: "lugares-y-escapadas" },
+      name: { en: "Places & Weekends", es: "Lugares y escapadas" },
+      description: { en: "Neighbourhoods and short trips worth understanding", es: "Barrios y viajes cortos que vale la pena entender" },
+      intro: {
+        en: "Neighbourhood walks and short trips, with practical routes and honest context as our first-hand library grows.",
+        es: "Caminatas por barrios y viajes cortos, con rutas prácticas y contexto honesto conforme crezca nuestra biblioteca propia."
+      }
+    }
+  ]
+};
+
 const registry: Record<SiteKey, SiteConfig> = {
   explicamelofacil: explicameloFacil,
-  nolandmarks: noLandmarks
+  nolandmarks: noLandmarks,
+  groundleveljapan: groundLevelJapan
 };
 
 function resolveKey(): SiteKey {

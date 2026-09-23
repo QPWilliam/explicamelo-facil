@@ -7,6 +7,7 @@ publicación, SEO, anuncios) y se diferencian en marca, idiomas, secciones y tem
 | --- | --- | --- | --- | --- |
 | Explícamelo Fácil | `explicamelofacil` | explicamelofacil.com | español | `editorial` (papel claro, serif, capitulares) |
 | No Landmarks | `nolandmarks` | nolandmarks.com | inglés + traducción bajo demanda | `visual` (oscuro, foto grande) |
+| Ground Level Japan | `groundleveljapan` | dominio pendiente | inglés + español | `field` (cuaderno claro, índigo y bermellón) |
 
 ## Dónde se decide todo
 
@@ -56,6 +57,8 @@ Las páginas no tienen lógica: son tres líneas que llaman a una vista de `comp
 
 ```bash
 NEXT_PUBLIC_SITE_KEY=nolandmarks USE_LOCAL_CONTENT=1 npm run dev
+
+NEXT_PUBLIC_SITE_KEY=groundleveljapan USE_LOCAL_CONTENT=1 npm run dev
 ```
 
 `USE_LOCAL_CONTENT=1` ignora `DATABASE_URL` y lee el archivo de ejemplo de esa web

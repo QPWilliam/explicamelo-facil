@@ -32,8 +32,23 @@ function LandmarksMark({ size }: { size: number }) {
   );
 }
 
+// Ground Level Japan: una calle vista desde arriba que se abre hacia el horizonte.
+// Une la idea de orientación, vida cotidiana y observar Japón desde el nivel de la calle.
+function GroundLevelMark({ size }: { size: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <rect x="3" y="3" width="58" height="58" rx="14" fill="var(--brand)" />
+      <circle cx="45" cy="18" r="7" fill="var(--accent)" />
+      <path d="M13 49h38M24 49l6-25h4l6 25" fill="none" stroke="var(--on-brand)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M32 29v5M32 40v5" fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function LogoMark({ size = 40 }: { size?: number }) {
-  return site.key === "nolandmarks" ? <LandmarksMark size={size} /> : <ExplicaMark size={size} />;
+  if (site.key === "nolandmarks") return <LandmarksMark size={size} />;
+  if (site.key === "groundleveljapan") return <GroundLevelMark size={size} />;
+  return <ExplicaMark size={size} />;
 }
 
 export function Logo({ size = 40 }: { size?: number }) {
@@ -43,6 +58,10 @@ export function Logo({ size = 40 }: { size?: number }) {
       {site.key === "nolandmarks" ? (
         <span className="wordmark">
           No <em>Landmarks</em>
+        </span>
+      ) : site.key === "groundleveljapan" ? (
+        <span className="wordmark">
+          Ground Level <em>Japan</em>
         </span>
       ) : (
         <span className="wordmark">

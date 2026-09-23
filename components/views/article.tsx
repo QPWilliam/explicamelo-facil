@@ -50,7 +50,7 @@ export async function ArticleView({ slug, locale }: { slug: string; locale: Loca
   const article = await getArticle(slug, locale);
   if (!article) notFound();
 
-  const all = await getArticles(locale);
+  const [all, translations] = await Promise.all([getArticles(locale), translationsOf(article)]);
   const related = relatedArticles(all, article);
   const sections = splitSections(article.body);
   const toc = headings(article.body);
@@ -103,6 +103,15 @@ export async function ArticleView({ slug, locale }: { slug: string; locale: Loca
           {article.city && <span>{article.city}</span>}
           {!article.city && article.country !== "General" && <span>{article.country}</span>}
         </div>
+        {translations.length > 0 && (
+          <div className="article-languages">
+            {translations.map(other => (
+              <Link key={other.locale} href={articlePath(other.slug, other.locale)} hrefLang={other.locale}>
+                {d.readIn(other.locale === "es" ? "Español" : "English")}
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
       <div className="cover">
         <Image src={article.cover} alt={article.coverAlt} fill priority sizes="(max-width: 780px) 100vw, 740px" />
