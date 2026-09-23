@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./logo";
+import { TranslatePageLink } from "./translate-page-link";
 import { tr } from "@/lib/i18n";
 import { categoryName, categoryPath, defaultLocale, localePrefix, routePath, site, t, type Locale } from "@/lib/sites";
 
@@ -16,7 +17,11 @@ export function SiteHeader({ locale = defaultLocale }: { locale?: Locale }) {
         <div className="wrap topbar-row">
           <span>{t(site.tagline, locale)}</span>
           <span className="topbar-topics">{topics.join(" · ")}</span>
-          {others.length > 0 && (
+          {site.key === "nolandmarks" ? (
+            <span className="lang-switch">
+              <TranslatePageLink label={d.translatePage} />
+            </span>
+          ) : others.length > 0 && (
             <span className="lang-switch">
               {others.map(l => (
                 <Link key={l} href={localePrefix(l) || "/"} hrefLang={l} prefetch={false}>

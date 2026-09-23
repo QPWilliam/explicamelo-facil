@@ -6,7 +6,7 @@ publicación, SEO, anuncios) y se diferencian en marca, idiomas, secciones y tem
 | Web | Clave (`NEXT_PUBLIC_SITE_KEY`) | Dominio | Idiomas | Tema |
 | --- | --- | --- | --- | --- |
 | Explícamelo Fácil | `explicamelofacil` | explicamelofacil.com | español | `editorial` (papel claro, serif, capitulares) |
-| No Landmarks | `nolandmarks` | nolandmarks.com | inglés (raíz) + español (`/es/…`) | `visual` (oscuro, foto grande) |
+| No Landmarks | `nolandmarks` | nolandmarks.com | inglés + traducción bajo demanda | `visual` (oscuro, foto grande) |
 
 ## Dónde se decide todo
 

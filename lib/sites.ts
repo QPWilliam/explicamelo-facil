@@ -104,8 +104,9 @@ const noLandmarks: SiteConfig = {
   key: "nolandmarks",
   domain: "nolandmarks.com",
   name: "No Landmarks",
-  // Inglés en la raíz (nolandmarks.com/...) y español bajo /es/...
-  locales: ["en", "es"],
+  // Todo el contenido editorial se publica una sola vez, en inglés. La cabecera ofrece
+  // traducción bajo demanda de la página completa sin duplicar guías en la base de datos.
+  locales: ["en"],
   theme: "visual",
   themeColor: "#0e1116",
   tagline: {
@@ -253,13 +254,13 @@ export function routePath(name: keyof SiteConfig["routes"], locale: Locale = def
 
 export function categoryPath(slug: string, locale: Locale = defaultLocale) {
   const category = site.categories.find(c => c.slug === slug);
-  const segment = category?.path ? t(category.path, locale) : slug;
+  const segment = category?.path?.[locale] ?? slug;
   return `${routePath("category", locale)}/${segment}`;
 }
 
 /** Busca una categoría por el segmento que aparece en la URL de ese idioma. */
 export function categoryByPath(segment: string, locale: Locale = defaultLocale) {
-  return site.categories.find(c => (c.path ? t(c.path, locale) : c.slug) === segment);
+  return site.categories.find(c => (c.path?.[locale] ?? c.slug) === segment);
 }
 
 export function categoryName(slug: string, locale: Locale = defaultLocale) {

@@ -12,6 +12,10 @@ Actualizado: 2026-09-22.
   Mensaje de consentimiento de Google (3 opciones) configurado para EEE/Reino Unido/Suiza.
 - Unas 61 guías publicadas o listas para publicar (`content/nuevos/lote-ia-y-fotos.json`).
 - Diez borradores nuevos de belleza y moda en `content/nuevos/lote-belleza-y-moda.json`, pendientes de revisión y publicación.
+- **https://nolandmarks.com** en Netlify con HTTPS y Supabase compartido. El contenido editorial
+  se publica en inglés y la cabecera permite traducir la página completa al español bajo demanda.
+  Tiene 15 guías en inglés publicadas; tres están relacionadas con 67 Sourdough y las demás cubren
+  transporte, barrios, planes, entradas y costes de Londres.
 
 ## Pendiente
 

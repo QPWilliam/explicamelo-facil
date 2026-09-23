@@ -46,6 +46,7 @@ Variables de entorno del sitio nuevo (Project configuration → Environment vari
 | `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` / `REVALIDATE_SECRET` | genera unos **nuevos** |
 | `NEXT_PUBLIC_GA_ID` | una propiedad de Analytics nueva para esta web |
 | `NEXT_PUBLIC_ADSENSE_ENABLED` | `false` de momento |
+| `NEXT_PUBLIC_ADSENSE_CLIENT` | `ca-pub-3486892211814364` (metaetiqueta activa aunque los anuncios sigan apagados) |
 
 AdSense se deja apagado hasta tener contenido y hasta que la cuenta esté aprobada.
 
