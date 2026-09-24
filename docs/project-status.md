@@ -16,9 +16,6 @@ Actualizado: 2026-09-22.
   se publica en inglés y la cabecera permite traducir la página completa al español bajo demanda.
   Tiene 15 guías en inglés publicadas; tres están relacionadas con 67 Sourdough y las demás cubren
   transporte, barrios, planes, entradas y costes de Londres.
-- **Ground Level Japan** preparado como tercera marca, todavía sin dominio. Publica cada tema completo
-  en inglés (raíz) y español (`/es/`) y comparte la misma base de Supabase filtrada por
-  `site=groundleveljapan`. Su lote inicial contiene 10 temas y 20 versiones enlazadas.
 
 ## Pendiente
 
@@ -29,5 +26,3 @@ Actualizado: 2026-09-22.
 - Seguir el catálogo (`docs/catalogo-contenido.md`): 2–3 guías por semana.
 - Revisar cada 3 meses precios y datos de guías que cambian (planes de IA, visas, tarifas).
 - Antes de cobrar desde Japón: el dueño debe revisar el permiso de actividades fuera de su visa.
-- Comprar el dominio de Ground Level Japan, crear su sitio de Netlify y configurar sus variables.
-- Sustituir gradualmente las portadas automáticas de Ground Level Japan por fotos y videos propios.

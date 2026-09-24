@@ -5,15 +5,13 @@ manda el código y actualiza este archivo.
 
 ## Qué es
 
-Un repositorio que construye **varias webs** con el mismo código. Hoy son tres:
+Un repositorio que construye **varias webs** con el mismo código. Hoy son dos:
 
 - **Explícamelo Fácil** (`explicamelofacil.com`, español): guías fáciles sobre dudas del día a día —
   dinero, celular y tecnología, inteligencia artificial, reseñas, trabajo, trámites, viajes, estudios,
   hogar y vida práctica.
 - **No Landmarks** (`nolandmarks.com`, inglés + español): guías honestas de Londres — qué hacer, comer
   y beber, cómo moverse, entradas y pases, barrios, dinero y precios, antes de ir.
-- **Ground Level Japan** (`groundleveljapan.com`, dominio pendiente, inglés + español): guías prácticas
-  para visitar Japón, mudarse y entender la vida cotidiana. El inglés va en la raíz y el español en `/es/`.
 
 Ambas se monetizan con Google AdSense. El dueño quiere mantenerlas con poco esfuerzo: publicar una
 guía nueva debe ser fácil y no requiere tocar código.
@@ -99,9 +97,7 @@ ejecutar **`npm run respaldo`**. En el repositorio solo van los ejemplos (`conte
 ## Reglas de contenido (obligatorias)
 
 - Explícamelo Fácil: español neutro latinoamericano, de tú, cercano.
-  No Landmarks: inglés británico sencillo y traducción bajo demanda; sin jerga de folleto de viajes.
-  Ground Level Japan: cada tema se publica completo en inglés y español con el mismo `translationKey`;
-  separar claramente la investigación de la experiencia propia.
+  No Landmarks: inglés británico sencillo y su versión en español; sin jerga de folleto de viajes.
 - La frase de la casa la pone la plantilla; está en `lib/sites.ts` (`slogan`), no se escribe en el texto.
 - Toda cifra, precio, requisito o ruta de menú necesita **fuente oficial** en `sources`. Nunca copiar texto.
 - **Prohibido**: salud/medicina, dietas o nutrición, salud mental, inversiones o cripto, asesoría legal o
