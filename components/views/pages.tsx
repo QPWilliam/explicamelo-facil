@@ -125,7 +125,14 @@ export function ContactView({ locale }: { locale: Locale }) {
       {email ? (
         <p><a className="btn" href={`mailto:${email}`}>{email}</a></p>
       ) : (
-        <p className="notice">Configura NEXT_PUBLIC_CONTACT_EMAIL para mostrar el correo de contacto.</p>
+        <>
+          {/* Sin NEXT_PUBLIC_CONTACT_EMAIL. Nunca mostrar una instrucción técnica en una página
+              pública: se ve mal y una página de contacto rota es de lo que revisa AdSense. */}
+          <p>{en ? "We're setting up the address for this site. It will be here shortly." : "Estamos configurando la dirección de esta web. Estará aquí en breve."}</p>
+          {process.env.NODE_ENV === "development" && (
+            <p className="notice">Falta NEXT_PUBLIC_CONTACT_EMAIL en las variables de entorno de este sitio.</p>
+          )}
+        </>
       )}
       <p className="muted small">
         {en
